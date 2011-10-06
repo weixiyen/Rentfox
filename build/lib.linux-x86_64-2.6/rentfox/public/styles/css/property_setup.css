@@ -1,0 +1,514 @@
+/* =layout
+----------------------------------------------- */
+#propertySetup {
+	overflow: auto;
+	}
+#propertySetup .leftColumn {
+	float: left;
+	width: 300px;
+	position: fixed;
+	margin: 20px 0 0 0;
+	}
+#propertySetup .rightColumn {
+	float: right;
+	width: 652px;
+	margin: 20px 0 0 0;
+	}
+#propertySetup input, #propertySetup textarea {
+	display: block;
+	margin: 3px 0 10px 0;
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	}
+#propertySetup .pane {
+	display: none;
+	overflow: auto;
+	}
+#propertySetup em {
+	display: block;
+	color: #666;
+	font-weight: normal;
+	width: 90%;
+	overflow: hidden;
+	padding: 0 0 5px 0;
+	}
+
+/* =edit mode bar
+----------------------------------------------- */
+#propertySetup .editMode {
+	position: fixed;
+	background: #ccc;
+	width: 932px;
+	padding: 10px 10px 5px 10px;
+	margin-top: -20px;
+	border-bottom: 1px solid #999;
+	}
+#propertySetup .editMode h1 {
+	font: 15px Verdana;
+	padding: 0 0 0 100px;
+	text-align: center;
+	}
+#propertySetup .editMode h1 strong {
+	font-weight: bold;
+	}
+#propertySetup .editMode .button {
+	float: right;
+	}
+	
+
+/* =property info display mode
+----------------------------------------------- */
+#propertySetup .propertyInfo .display {
+	overflow: auto;
+	}
+#propertySetup .propertyInfo .display .pic {
+	float: left;
+	}
+#propertySetup .propertyInfo .display .info {
+	float: left;
+	margin-left: 10px;
+	width: 200px;
+	}
+#propertySetup .propertyInfo .display h3 {
+	font-size: 18px;
+	padding-bottom: 3px;
+	font-weight: normal;
+	cursor: pointer;
+	}
+#propertySetup .propertyInfo .display h3:hover {
+	text-decoration: underline;
+	}
+#propertySetup .propertyInfo .display p {
+	line-height: 1.4em;
+	font-size: 11px;
+	}
+#propertySetup .propertyInfo .display .action {
+	margin-top: 10px;
+	}
+#propertySetup .propertyInfo .display .action a {
+	margin-right: 5px;
+	}
+
+/* =property info edit mode
+----------------------------------------------- */
+#propertySetup .propertyInfo {
+	padding: 20px 0 0 20px;
+	}
+#propertySetup .propertyInfo input {
+	width: 130px;
+	}
+#propertySetup .propertyInfo select {
+	display: block;
+	margin: 0 0 10px 0;
+	width: 130px;
+	}
+#propertySetup .propertyInfo .clear {
+	clear: both;
+	}
+	
+/* =page form style
+----------------------------------------------- */
+#propertySetup .inputs {
+	float: left;
+	overflow: auto;
+	}
+#propertySetup .inputs .zip {
+	float: left;
+	}
+#propertySetup .inputs .state {
+	float: left;
+	margin-right: 10px;
+	}
+#propertySetup .inputs .state input {
+	width: 30px;
+	}
+#propertySetup .save label {
+	display: block;
+	font-weight: bold;
+	}
+#propertySetup .save .row {
+	overflow: auto;
+	}
+#propertySetup .save .row label {
+	float: left;
+	margin-right: 10px;
+	}
+#propertySetup .save label input{
+	color: #888;
+	}
+#propertySetup .save label input.active{
+	color: #333;
+	}
+#propertySetup .save label textarea{
+	color: #333;
+	line-height: 1.5em;
+	padding-left: 5px;
+	font-size: 14px;
+	font-family: 'Trebuchet MS';
+	}
+#propertySetup .save label input#propertyZip {
+	width: 87px;
+	}
+#propertySetup .save .action {
+	clear: both;
+	}
+#propertySetup .save .action a.fixedLength {
+	margin-right: 5px;
+	width: 65px;
+	}
+#propertySetup .uploadPlaceHolder {
+	float: right;
+	}
+#propertySetup .save .uploadPlaceHolder {
+	margin-top: 17px;
+	}
+
+
+/* =unit maker
+----------------------------------------------- */
+#propertySetup .unitMaker {
+	clear: both;
+	margin: 20px 0 0 20px;
+	border-top: 1px solid #ccc;
+	padding: 15px 0 0 0;
+	overflow: auto;
+	width: 280px;
+	}
+#propertySetup .input {
+	float: left;
+	margin-top: 3px;
+	}
+#propertySetup .unitMaker input#unitsInput {
+	width: 66px;
+	color: #999;
+	}
+#propertySetup .unitMaker input#unitsInput.active {
+	color: #333;
+	}
+#propertySetup .unitMaker .action {
+	margin-left: 80px;
+	overflow: auto;
+	}
+#propertySetup .unitMaker .action a {
+	float: left;
+	margin-right: 5px;
+	}
+#propertySetup .unitMaker .tips {
+	background: #fff;
+	margin-top: 10px;
+	display: none;
+	border: 1px solid #ccc;
+	padding: 10px;
+	clear: both;
+	width: 258px;
+	}
+#propertySetup .unitMaker .tips .tooltipArrow {
+	background: url('../img/hint_tooltip.png') no-repeat;
+	width: 23px;
+	height: 11px;
+	position: absolute;
+	margin-top: -21px;
+	}
+#propertySetup .unitMaker .tips li {
+	padding: 3px 0 3px 0;
+	border-top: 1px dotted #ccc;
+	}
+#propertySetup .unitMaker .tips li.header {
+	border-top: none;
+	padding-bottom: 5px;
+	font-weight: bold;
+	}
+#propertySetup .unitMaker .tips label {
+	width: 80px;
+	float: left;
+	}
+#propertySetup .unitMaker .tips strong {
+	padding-bottom: 10px;
+	display: block;
+	font-weight: bold;
+	}
+	
+/* =progress
+----------------------------------------------- */
+#propertySetup .progress {
+	display: none;
+	clear: both;
+	padding: 10px 0 20px 0;
+	overflow: hidden;
+	width: 480px;
+	}
+#propertySetup .progress .bar {
+	height: 8px;
+	background: #333;
+	width: 380px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	}
+#propertySetup .progress .bar span {
+	height: 8px;
+	background: #64ff45 url("../img/progressbar.png") no-repeat;
+	display: block;
+	width: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	}
+#propertySetup .progress label {
+	margin-top: 5px;
+	display: block;
+	color: #666;
+	}
+#propertySetup .progress .exitSetup {
+	display: none;
+	float: right;
+	margin-top: -10px;
+	}
+	
+/* =unit list
+----------------------------------------------- */
+#propertySetup .unitList {
+	float: left;
+	padding: 20px 0 0 20px;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame {
+	max-width: 80px;
+	overflow: hidden;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.noFloorPlan {
+	padding-left: 23px;
+	background: url('../img/ico/accept_gray.png') no-repeat 4px center;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.hasFloorPlan {
+	padding-left: 23px;
+	background: url('../img/ico/accept.png') no-repeat 4px center;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.noFloorPlan.on {
+	padding-left: 23px;
+	background: #333 url('../img/ico/accept_gray.png') no-repeat 4px center;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.hasFloorPlan.on {
+	padding-left: 23px;
+	background: #333 url('../img/ico/accept.png') no-repeat 4px center;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li input {
+	float: left;
+	position: relative;
+	padding: 0;
+	top: -2px;
+	left: -5px;
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	}
+#propertySetup .unitList .unitScroller .manualInput input {
+	width: 65px;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.inuse {
+	background: #ddd;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.highlight {
+	background: #CCFF99;
+	}
+#propertySetup .unitList .unitScroller .scrollFrame li.on.highlight {
+	background: #333;
+	}
+
+/* =unit tooltip to click on
+----------------------------------------------- */
+#propertySetup .unit.tooltip {
+	background: #fff;
+	position: fixed;
+	margin: 47px 0 0 120px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	max-width: 200px;
+	display: none;
+	}
+#propertySetup .unit.tooltip > .arrow {
+	position: absolute;
+	height: 23px;
+	width: 11px;
+	background: url('../img/hint_tooltip_left.png');
+	margin: -3px 0 0 -21px;
+	}
+#propertySetup .unit.tooltip h5 {
+	font-weight: bold;
+	padding: 0 0 10px 0;
+	}
+
+
+/* =unit info
+----------------------------------------------- */
+#propertySetup .unitInfo {
+	float: left;
+	margin: 20px 0 0 150px;
+	overflow: auto;
+	}
+
+#propertySetup .unitInfo .unitbox {
+	padding: 0 0 4px 0;
+	background: no-repeat url("../img/unit_display_bottom.png") center bottom;
+	display: none;
+	}
+#propertySetup .unitInfo .unitbox > .wrap {
+	padding: 4px 0 0 0;
+	background: no-repeat url("../img/unit_display_top.png");
+	}
+#propertySetup .unitInfo .unitbox > .wrap > .wrap {
+	background: #fff;
+	width: 478px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	}
+#propertySetup .unitInfo .unitbox .unitedit {
+	float: right;
+	}
+#propertySetup .unitInfo .edit {
+	display: none;
+	background: #fff;
+	overflow: auto;
+	padding: 20px;
+	}
+#propertySetup .unitInfo h1{
+	font: bold 20px Georgia;
+	margin-bottom: 15px;
+	cursor: pointer;
+	float: left;
+	}
+#propertySetup .unitInfo h3{
+	font: bold 10px Verdana;
+	padding-bottom: 5px;
+	}
+#propertySetup .unitInfo h1:hover{
+	text-decoration: underline;
+	}
+#propertySetup .unitInfo .unitLabelInput {
+	display: none;
+	overflow: auto;
+	}
+#propertySetup .unitInfo .unitLabelInput input {
+	float: left;
+	width: 75px;
+	font-size: 18px;
+	margin-right: 5px;
+	}
+#propertySetup .unitInfo .unitLabelInput a {
+	float: left;
+	}
+#propertySetup .unitInfo .save {
+	clear: both;
+	}
+#propertySetup .unitInfo .save label{
+	margin-top: 10px;
+	overflow: auto;
+	}
+#propertySetup .unitInfo .inputs input{
+	width: 161px;
+	}
+#propertySetup .unitInfo .save .row input {
+	width: 45px;
+	}
+#propertySetup .unitInfo .display {
+	display: none;
+	background: #fff;
+	padding: 20px;
+	overflow: auto;
+	}
+#propertySetup .unitInfo .display .floorplan a.link {
+	color: #0c3f84;
+	text-decoration: underline;
+	cursor: pointer;
+	}
+#propertySetup .unitInfo .display p {
+	line-height: 1.8em;
+	margin-bottom: 10px;
+	}
+#propertySetup .unitInfo .display .assign {
+	padding: 20px 0 30px 0;
+	overflow: auto;
+	}
+#propertySetup .unitInfo .floorPlanInfo {
+	clear: both;
+	}
+#propertySetup .unitInfo .filter {
+	margin: 20px 0 5px 0;
+	overflow: auto;
+	clear: both;
+	}
+#propertySetup .unitInfo .filter label {
+	padding: 4px 30px 0 0;
+	background: url("../img/arrow_more_down_dark.png") no-repeat right 3px;
+	display: block;
+	height: 20px;
+	font-weight: bold;
+	float: left;
+	}
+#propertySetup .unitInfo .filter .options {
+	position: absolute;
+	margin-top: 23px;
+	color: #fff;
+	background: url("../img/filter_bottom_wide.png") no-repeat center bottom;
+	width: 200px;
+	display: none;
+	padding-bottom: 5px;
+	}
+#propertySetup .unitInfo .filter .options .wrap {
+	background: url("../img/filter_body_wide.png") no-repeat center top;
+	padding: 10px 0 10px 0;
+	}
+#propertySetup .unitInfo .filter .options ul {
+	max-height: 400px;
+	overflow: auto;
+	}
+#propertySetup .unitInfo .filter .options ul li {
+	cursor: pointer;
+	display: block;
+	padding: 3px 7px 3px 23px;
+	}
+#propertySetup .unitInfo .filter .options ul li:hover {
+	background: #333;
+	}
+#propertySetup .unitInfo .filter .options ul li span.label {
+	width: 130px;
+	overflow: hidden;
+	display: block;
+	height: 16px;
+	line-height: 1.5em;
+	}
+#propertySetup .unitInfo .filter .options ul li span.delete {
+	height: 16px;
+	width: 16px;
+	float: right;
+	background: url('../img/ico/delete.png');
+	display: none;
+	}
+#propertySetup .unitInfo .filter .options ul li:hover span.delete {
+	display: block;
+	}
+#propertySetup .unitInfo .filter .options ul li.on {
+	background: url("../img/check_mark.png") 3px 1px no-repeat;
+	font-weight: bold;
+	}
+#propertySetup .unitInfo .filter .options ul li.on:hover {
+	background: #333 url("../img/check_mark.png") 3px 1px no-repeat;
+	}
+#propertySetup .unitInfo .filter .options ul li.new {
+	padding: 10px 3px 10px 23px;
+	text-decoration: underline;
+	color: #b7e0ff;
+	font-weight: bold;
+	}
+#propertySetup .unitInfo .filter:hover label {
+	background: url("../img/filter_top.png") no-repeat right -1px;
+	}
+#propertySetup .unitInfo .filter:hover .options {
+	display: block;
+	}
+
+

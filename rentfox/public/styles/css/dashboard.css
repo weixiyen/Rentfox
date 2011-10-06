@@ -1,0 +1,139 @@
+/* =layout
+----------------------------------------------- */
+#dashboard {
+	overflow: auto;
+	}
+
+/* =search
+----------------------------------------------- */
+#dashboard .search {
+	position: fixed;
+	overflow: auto;
+	width: 364px;
+	min-height: 500px;
+	top: 10%;
+	text-align: center;
+	background: url("../img/dash_bg.png") no-repeat center 85px;
+	}
+#dashboard .search .logo {
+	padding: 150px 0 0 0;
+	background: url("../img/logo_big.png") no-repeat center 50px;
+	}
+#dashboard .search .stats {
+	padding-top: 20px;
+	}
+#dashboard .search .stats p {
+	margin-bottom: 10px;
+	}
+
+	
+/* =stats
+----------------------------------------------- */
+#dashboard .progressbox {
+	margin: 0 55px 20px 55px;
+	}
+
+
+/* =properties
+----------------------------------------------- */
+#dashboard .props {
+	float: right;
+	width: 300px;
+	margin-top: 40px;
+	}
+#dashboard .props .prop {
+	overflow: auto;
+	clear: both;
+	margin: 0 0 20px 30px;
+	padding: 5px;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: #333;
+	}
+#dashboard .props .prop-textonly {
+	margin: 0 0 0 35px;
+	display: block;
+	color: #0c3f84;
+	padding: 5px 5px 5px 20px;
+	}
+#dashboard .props .prop-textonly.multi {
+	background: url("../img/ico/building.png") no-repeat left center;
+	}
+#dashboard .props .prop-textonly.single {
+	background: url("../img/ico/house.png") no-repeat left center;
+	}
+#dashboard .props .prop:hover dl {
+	color: #0c3f84;
+	}
+#dashboard .props .prop:hover .thumb .frame {
+	background: url("../img/thumb_frame_blue.png") no-repeat center center;
+	}
+#dashboard .props .prop .pic {
+	float: left;
+	}
+#dashboard .props .prop dl {
+	float: left;
+	margin-left: 10px;
+	padding: 2px;
+	}
+#dashboard .props .prop dl dt {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+	}
+#dashboard .props .prop dl dd {
+	display: block;
+	float: left;
+	}
+#dashboard .props .prop dl dd.tenants {
+	padding: 0 10px 0 10px;
+	margin: 0 10px 0 10px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	}
+#dashboard .props .prop dl dd .title {
+	display: block;
+	margin-bottom: 5px
+	}
+#dashboard .props .prop dl dd .data {
+	display: block;
+	}
+#dashboard .props .create {
+	margin: -15px 0 15px 35px;
+	overflow: hidden;
+	}
+#dashboard .props .tooltip {
+	background: #fff;
+	position: absolute;
+	margin: 0 0 0 15px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	max-width: 250px;
+	font-size: 15px;
+	line-height: 1.5em;
+	}
+#dashboard .props .tooltip > .arrow {
+	position: absolute;
+	height: 11px;
+	width: 23px;
+	background: url('../img/hint_tooltip.png');
+	margin: -21px 0 0 10px;
+	}
+#dashboard .props .tooltip h1 {
+	font: bold 25px "Trebuchet MS";
+	padding: 0 0 10px 0;
+	}
+
+/* =pulse
+----------------------------------------------- */
+#dashboard .pulse {
+	float: left;
+	width: 300px;
+	margin-top: 20px;
+	padding-bottom: 60px;
+	}
+

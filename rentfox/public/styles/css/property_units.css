@@ -1,0 +1,70 @@
+/* =layout
+----------------------------------------------- */
+#propertyUnits {
+    overflow: hidden;
+    }
+    
+/* =table header
+----------------------------------------------- */
+#propertyUnits .unitTable th.property select {
+    width: 175px;
+    }
+#propertyUnits .unitTable th.status select {
+    width: 170px;
+    }
+    
+/* =table columns
+----------------------------------------------- */
+#propertyUnits .unitTable .unit {
+    width: 75px;
+    cursor: pointer;
+    }
+#propertyUnits .unitTable .property {
+    width: 200px;
+    }
+#propertyUnits .unitTable .rent {
+    width: 80px;
+    }
+#propertyUnits .unitTable .due {
+    width: 70px;
+    }
+#propertyUnits .unitTable .late {
+    width: 100px;
+    }
+#propertyUnits .unitTable .status {
+    width: 417px;
+    }
+
+/* =Unit column
+----------------------------------------------- */
+#propertyUnits .unitTable thead .unit input {
+    width: 48px;
+    color: #999;
+    }
+#propertyUnits .unitTable thead .unit input.active {
+    color: #333;
+    }
+#propertyUnits .unitTable tbody .unit {
+    width: 75px;
+    cursor: pointer;
+    text-decoration: underline;
+    }
+#propertyUnits .unitTable tbody .unit:hover {
+    color: #fff;
+    background: #666;
+    font-weight: bold;
+    text-decoration: none;
+    }
+#propertyUnits .unitTable .late em {
+    color: #999;
+    font: 9px Verdana;
+    }
+
+
+/* =sorting
+----------------------------------------------- */
+#propertyUnits .sortImg {
+    display: none;
+    position: absolute;
+    margin: 0 0 0 2px;
+    }

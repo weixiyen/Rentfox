@@ -1,0 +1,25 @@
+<div id="unitContact" class="wrap center">
+
+	<div class="foxClose"><span>Close</span></div>
+
+	<h2>Resident Contact Info</h2>
+	% if len(c.tenantList) != 0:
+		% for tenant in c.tenantList:
+			<ul class="tenant">
+	            <li class="name">${tenant['name']}</li>
+	            <li class="phone">${tenant['phone']}</li>
+	            <li class="email">${tenant['email']}</li>
+	        </ul>
+		% endfor
+		<p>
+		<div class="action"><a href="/unit/view/${c.unitId}" class="link">View this unit</a></div>
+		</p>
+	% else:
+		% if c.unit.floorplan:
+			<p>No tenant records.</p>
+			<p><a href="/unit/view/${c.unitId}" class="link">View this unit</a></p>
+		% else:
+			<p>Unit ${c.unit.label} does not have a floorplan. Go to <a class="link" href="/property/setup/${c.unit.propertyid}/${c.unit.id}">property setup</a> to create a floorplan for this unit.</p>
+		% endif
+	% endif
+</div>

@@ -1,0 +1,205 @@
+/* =layout
+----------------------------------------------- */
+#tenantView {
+    overflow: auto;
+    }	
+#tenantView .personal {
+    width: 30%;
+    float: left;
+    }
+#tenantView .emergency {
+    width: 30%;
+    float: left;
+    }
+#tenantView .residences {
+    width: 40%;
+    float: left;
+	margin-left: -1px;
+    }
+
+/* =data list
+----------------------------------------------- */
+#tenantView strong {
+    }
+#tenantView em {
+    color: #666;
+    }
+#tenantView > div > .wrap {
+    margin: 20px;
+    padding: 10px 10px 0 25px;
+    }
+#tenantView h3 {
+    border-top: 1px solid #ccc;
+    overflow: auto;
+    display: block;
+    margin-bottom: 30px;
+    }
+#tenantView h3 span{
+    background: #efefef;
+    display: block;
+    padding: 5px 10px 5px 0;
+    position: absolute;
+    margin-top: -14px;
+    font: bold 12px Verdana;
+    }
+#tenantView p {
+    overflow: hidden;
+    display: block;
+    line-height: 1.7em;
+    margin: 0 0 20px 0;
+    clear: both;
+    border-bottom: 1px solid #efefef;
+    padding: 5px;
+    margin-left: -5px;
+    }
+#tenantView p.item .delete {
+    float: right;
+    display: none;
+    cursor: pointer;
+    margin: 3px 3px 0 0;
+    }
+#tenantView p.item .edit {
+    float: right;
+    display: none;
+    cursor: pointer;
+    margin: 3px 3px 0 0;
+    }
+#tenantView p.item:hover .delete {
+    display: block;
+    }
+#tenantView p.item:hover .edit {
+    display: block;
+    }
+#tenantView p.item:hover {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #ddd;
+    }
+#tenantView p > span {
+    margin-bottom: 2px;
+    display: block;
+    }
+#tenantView .edit {
+    margin-bottom: 30px;
+    overflow: auto;
+    }
+#tenantView .editor {
+    display: none;    
+    }
+    
+/* =personal
+----------------------------------------------- */
+#tenantView .personal > .wrap {
+    background: no-repeat url("../img/ico/lock.png");
+    }
+#tenantView .personal .editor {
+    background: url("../img/whitebg_small_bottom.png") center bottom no-repeat;
+    padding: 0 0 5px 0;
+    margin: 0 0 15px 0;
+    }
+#tenantView .personal .editor .wrap {
+    background: url("../img/whitebg_small.png") center top no-repeat;
+    padding: 15px;
+    overflow: auto;
+    }
+#tenantView .personal .unit {
+	float: left;
+	display: block;
+	clear: both;
+	color: blue;
+	}
+	
+/* =emergency
+----------------------------------------------- */
+#tenantView .emergency > .wrap {
+    background: no-repeat url("../img/ico/user_orange.png");
+    }
+#tenantView .emergency .editor {
+    background: url("../img/whitebg_small_bottom.png") center bottom no-repeat;
+    padding: 0 0 5px 0;
+    margin: 0 0 15px 0;
+    }
+#tenantView .emergency .editor .wrap {
+    background: url("../img/whitebg_small.png") center top no-repeat;
+    padding: 15px;
+    overflow: auto;
+    }
+
+/* =residences
+----------------------------------------------- */
+#tenantView .residences > .wrap {
+    background: no-repeat url("../img/ico/house.png");
+    }
+#tenantView .residences .editor {
+    background: url("../img/whitebg_medium_bottom.png") center bottom no-repeat;
+    padding: 0 0 5px 0;
+    margin: 0 0 15px 0;
+    }
+#tenantView .residences .editor .wrap {
+    background: url("../img/whitebg_medium.png") center top no-repeat;
+    padding: 15px;
+    overflow: auto;
+    }
+
+/* =editor form styling
+----------------------------------------------- */
+#tenantView .editor label {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    display: block;
+    clear: both;
+    }
+#tenantView .editor label span {
+    font: normal 10px Verdana;
+	color: #666;
+	padding: 0 0 0 5px;
+    }	
+#tenantView .editor input {
+    display: block;
+    margin: 3px 0 0 0;
+    color: #999;
+    width: 90%;
+    }
+#tenantView .editor input.active {
+    display: block;
+    margin: 3px 0 0 0;
+    color: #000;
+    }
+#tenantView .editor .button {
+    margin: 5px 5px 0 0;
+    }
+#tenantView .editor input.datefield {
+    width: 100px;
+    background: url("../img/ico/date.png") no-repeat 2px center;
+    padding-left: 22px;
+    }
+    
+/* =short editor
+----------------------------------------------- */
+#tenantView .editor label.half {
+    clear: none;
+    float: left;
+    width: 46%;
+    margin-right: 7px;
+    }
+#tenantView .editor label.long {
+    clear: none;
+    float: left;
+    width: 70%;
+    margin-right: 5px;
+    }
+#tenantView .editor label.short {
+    clear: none;
+    float: left;
+    width: 20%;
+    }
+
+
+/* =Errors
+----------------------------------------------- */
+#tenantView input.error {
+	border: 1px solid #d30000;
+	border-top: 2px solid #d30000;
+	border-left: 2px solid #d30000;
+	background: #ffe3e3;
+	}

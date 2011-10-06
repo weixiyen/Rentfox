@@ -1,0 +1,83 @@
+<%inherit file="/base.html" />
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		dash = new Dashboard;
+	});
+</script>
+
+<div class="page" id="dashboard">
+
+	
+	<div class="pulse" id="dashboard-pulse"><div class="wrap">
+		<div class="filterList">
+
+			<label id="dashboard-pulse-label">Everything</label>
+			<div class="options">
+				<ul id="dashboard-pulse-options">
+					<li class="on" rel="all">Everything</li>
+					<li rel="lease">Lease</li>
+					<li rel="rent">Rent</li>
+					<li rel="warning">Warnings</li>
+					<li rel="transaction">Transactions</li>
+					<li rel="message">Messages</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container"></div>
+	</div></div>
+
+
+	<div class="props">
+		<div class="create">
+			<a class="mini button" href="/property/setup"><span><img src="/styles/img/ico/building_add.png" />Create Property</span></a>
+		</div>
+	% if 0 < len(c.properties) < 20:
+		
+		% for property in c.properties:
+			<a class="prop" href="/property/view/${property['id']}">
+				<div class="pic">
+					<div class="thumb"><span class="frame"><img src="${property['photo']}" /></span></div>
+				</div>
+				<dl>
+					<dt>${property['name']}</dt>
+					<dd class="units"><span class="title">Units</span><span class="data">${property['totalUnits']}</span></dd>
+					<dd class="tenants"><span class="title">Tenants</span><span class="data">${property['totalTenants']}</span></dd>
+					<dd class="occupied"><span class="title">Occupied</span><span class="data">${property['percentOccupied']}</span></dd>
+				</dl>
+			</a>
+		% endfor
+	
+	% elif len(c.properties):
+	
+		% for property in c.properties:
+			<a class="prop-textonly ${property['type']}" href="/property/view/${property['id']}">${property['name']}</a>
+		% endfor
+		
+	% else:
+		<div class="tooltip">
+			<div class="arrow"></div>
+			<h1>Start Here</h1>
+			<p>You'll need to create a property first, then some units, floorplans, and leases.</p>
+		</div>
+	% endif
+
+	</div>
+
+	
+	<div class="search" id="searchpanel">
+		<div class="logo"></div>
+
+		<div class="stats">
+			
+			<div class="progressbox" id="rent-progress">
+				<h3>${c.currentMonth} rent tracker</h3>
+				<div class="bar"><span style="width:${c.rentPercent}"></span></div>
+				<label>${c.rentPercent} paid (${c.rentPaid}/${c.rentDue}).</label>
+			</div>
+			<p>${c.totalUnits} Units</p><p>${c.totalTenants} Tenants</p><p>${c.occupancy} Occupancy</p>
+		</div>
+	</div>
+
+</div>

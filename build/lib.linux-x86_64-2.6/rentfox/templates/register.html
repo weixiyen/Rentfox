@@ -1,0 +1,41 @@
+<%inherit file="/base.html"/>
+<script type="text/javascript">
+    $(document).ready(function(){
+         
+         page = new Page;
+         
+         $('button').bind('click',function(){
+            
+            page.request({
+                url: '/auth/createUser',
+                request: {
+                    company: $('#company').val(),
+                    username: $('#user').val(),
+                    password: $('#pass').val()
+                },
+                success: function(json){
+                    $('#makeuser').hide('fast');
+                    $('#thanks').show('fast').text('omg user added!!!');
+                }
+            });
+            
+         });
+
+    });
+</script>
+<div class="page">
+    <div id="makeuser">
+        company name<input type="text" id="company" /><br>
+        username<input type="text" id="user" /><br>
+        password<input type="password" id="pass" /><br>
+        <button>Make User</button>
+    </div>
+    <div id="thanks"></div><br />
+    Current logged in user: ${c.test}<br />
+    
+    % for param in c.environment: 
+        ${param}<br />
+    % endfor
+</div>
+
+

@@ -1,0 +1,140 @@
+/* =layout
+----------------------------------------------- */
+#propertyRecord {
+    overflow: hidden;
+    }
+
+/* =table header
+----------------------------------------------- */
+#propertyRecord .unitTable th.unit span {
+    padding-top: 16px;
+    }
+#propertyRecord .unitTable th.rent span {
+    padding-top: 16px;
+    }
+#propertyRecord .unitTable th.due span {
+    padding-top: 16px;
+    }
+#propertyRecord .unitTable th.property select {
+    width: 180px;    
+    }
+    
+/* =table columns
+----------------------------------------------- */
+#propertyRecord .unitTable .date {
+    width: 120px;
+    }
+#propertyRecord .unitTable .info {
+    width: 120px;
+    }
+#propertyRecord .unitTable .property {
+    width: 200px;
+    }
+#propertyRecord .unitTable .unit {
+    width: 75px;
+    cursor: pointer;
+    }
+#propertyRecord .unitTable .rent {
+    width: 80px;
+    }
+#propertyRecord .unitTable .due {
+    width: 65px;
+    }
+#propertyRecord .unitTable .status {
+    width: 402px;
+    }
+
+/* =action button
+----------------------------------------------- */
+#propertyRecord .unitTable tr .status .mini.button {
+    margin: 5px 10px 0 10px;
+    float: right;
+    }
+#propertyRecord .unitTable tr .status > .opts {
+    float: right;
+    margin: 7px 10px 0 0;
+    cursor: pointer;
+    }
+
+
+/* =Unit column
+----------------------------------------------- */
+#propertyRecord .unitTable thead .unit span {
+    padding-top: 12px;
+    }
+#propertyRecord .unitTable thead .unit input {
+    width: 48px;
+    color: #999;
+    }
+#propertyRecord .unitTable thead .unit input.active {
+    color: #333;
+    }
+#propertyRecord .unitTable tbody .unit {
+    width: 75px;
+    cursor: pointer;
+    text-decoration: underline;
+    }
+#propertyRecord .unitTable tbody .unit:hover {
+    color: #fff;
+    background: #666;
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+/* =Rent column
+----------------------------------------------- */
+#propertyRecord .unitTable tbody .rent {
+    cursor: pointer;
+    text-decoration: underline;
+    }
+#propertyRecord .unitTable tbody .rent:hover {
+    color: #fff;
+    background: #666;
+    font-weight: bold;
+    text-decoration: none;
+    }
+    
+/* =row styles
+----------------------------------------------- */
+#propertyRecord .unitTable tr .info span {
+    display: block;
+    height: 16px;
+    width: 16px;
+    margin: 8px 0 0 10px;
+    }
+#propertyRecord .unitTable tr.ok .info span {
+    background: url('../img/ico/accept.png') no-repeat;    
+    }
+#propertyRecord .unitTable tr.overdue .info span {
+    background: url('../img/ico/exclamation.png') no-repeat;  
+    }
+#propertyRecord .unitTable tr.warning .info span {
+    background: url('../img/ico/error.png') no-repeat;  
+    }
+#propertyRecord .unitTable tr.overdue .status > span {
+    color: red; 
+    }
+#propertyRecord .unitTable tr.warning .status > span {
+    color: red; 
+    }
+
+/* =foxhelper
+----------------------------------------------- */  
+#foxhelper .display .wrap .rentDiv .error {
+	position: fixed;
+	margin-left: 190px;
+	background: #C60000;
+	color: #fff;
+	font: bold 10px Verdana;
+	z-index: 1300;
+	background: url('../img/error_bubble.png') no-repeat;
+	}
+#foxhelper .display .wrap .rentDiv .error > span {
+	width: 220px;
+	height: 30px;
+	display: block;
+	}
+#foxhelper .display .wrap .rentDiv .error > span > span {
+	padding: 8px 3px 0 20px;
+	display: block;
+	}  

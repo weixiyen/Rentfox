@@ -1,0 +1,105 @@
+/* =background
+----------------------------------------------- */
+body#signinpage {
+    }
+#signinpage #eventStatus {
+    top: 0;    
+    }
+#signinpage #foxhelper {
+    margin: auto;
+    position: static;
+    }
+#signinpage #foxhelper .thefox {
+    cursor: default;
+    }
+#signinpage #foxhelper .foxpanel {
+    margin: auto;
+    position: static;
+    float: none;
+    margin-top: -25px;
+    }
+#signinpage a {
+    cursor: pointer;
+    }
+#signinpage .links {
+    overflow: hidden;
+    padding: 5px 0 5px 0;
+    color: #666;
+    font-size: 9px;
+    }
+#signinpage a.link {
+    color: #26478F;
+    text-decoration: underline;
+    display: inline;
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+    }
+#signinpage .view {
+    display: none;
+    }
+#signinpage .view.on {
+    display: block;
+    }
+#signinpage strong {
+    font-weight: bold;
+    }
+#signinpage form {
+    margin: 0 0 0 3px;
+    display: block;
+    overflow: hidden;
+    }
+#signinpage input {
+    width: 250px;
+    display: block;
+    margin: 0 0 15px 0;
+    font: bold 14px Verdana;
+    padding: 5px;
+    }
+#signinpage .action {
+    overflow: hidden;
+    padding: 0 0 10px 0;
+    }
+#signinpage .action .button{
+    margin: 0 5px 0 0;
+    }
+#signinpage .error {
+    background: #9A0017 url('../img/ico/error.png') no-repeat 10px 10px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.5em;
+    padding: 10px 10px 10px 35px;
+    display: none;
+    }
+#signinpage .error.on {
+    display: block;    
+    }
+#signinpage .info {
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.5em;
+    padding: 10px 10px 10px 35px;
+    }
+#signinpage .info.email {
+    background: #C2F0F3 url('../img/ico/mail.png') no-repeat 10px 10px;
+    }
+#signinpage .info.hint {
+    background: #BDF3C4 url('../img/ico/accept.png') no-repeat 10px 10px;    
+    }
+#signinpage .info em {
+    text-decoration: underline;
+    display: block;
+    }
+#signinpage .footer {
+    text-align: center;
+    color: #787878;
+    width: 145px;
+    display: block;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    background: url('../img/gray_fox.png') no-repeat left center;
+    position: relative;
+    z-index: 1100;
+    margin-top: -40px;
+    }
+

@@ -1,0 +1,256 @@
+/* =layout
+----------------------------------------------- */
+#reportsTransactions {
+    overflow: hidden;
+    }
+#reportsTransactions .hidden {
+	display: none;
+	}
+#reportsTransactions .transactionList {
+    margin-right: 280px;
+    }
+    
+/* =table header
+----------------------------------------------- */
+#reportsTransactions .unitTable th.date select {
+    width: 90px;
+    }
+#reportsTransactions .unitTable th.type select {
+    width: 110px;
+    }
+#reportsTransactions .unitTable thead .who input {
+    width: 150px;
+    color: #999;
+    }
+#reportsTransactions .unitTable thead .who input.active {
+    color: #333;
+    }
+    
+/* =table columns
+----------------------------------------------- */
+#reportsTransactions .unitTable .date {
+    width: 105px;
+    }
+#reportsTransactions .unitTable .type {
+    width: 160px;
+    }
+#reportsTransactions .unitTable .who {
+    width: 170px;
+    }
+#reportsTransactions .unitTable .amount {
+    width: 100px;
+    text-align: right;
+    }
+#reportsTransactions .unitTable .amount span {
+    padding-right: 10px;
+    }
+#reportsTransactions .unitTable .balance {
+    width: 127px;
+    text-align: right;
+    }
+#reportsTransactions .unitTable .balance span {
+    padding-right: 10px;
+    }
+#reportsTransactions .unitTable .status {
+    width: 280px;
+    }
+
+/* =table body
+----------------------------------------------- */
+#reportsTransactions .unitTable tbody .date > span {
+    padding-left: 10px;
+    text-align: left;
+    }
+#reportsTransactions .unitTable tbody tr {
+    cursor: pointer;
+    }
+#reportsTransactions .unitTable tbody tr.Expense .amount {
+    color: red;
+    }
+
+
+/* =sidepanel
+----------------------------------------------- */
+#reportsTransactions .sidepanel {
+    position: fixed;
+    margin: -15px 0 0 666px;
+    border-left: 1px solid #ccc;
+    overflow: hidden;
+    min-height: 200px;
+    }
+#reportsTransactions .sidepanel > .wrap {
+    width: 279px;
+    }
+#reportsTransactions .sidepanel > .wrap > .wrap {
+    padding: 10px;
+    }
+#reportsTransactions .sidepanel .panel {
+    display: none;
+    }
+#reportsTransactions .sidepanel .panel.on {
+    display: block;
+    }
+#reportsTransactions .sidepanel .delete {
+	float: right;
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+    padding-top:10px;
+    display:none;
+	}
+    
+/* =default panel
+----------------------------------------------- */
+#reportsTransactions .sidepanel .default .section {
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0 15px 0;
+    margin: 0 0 15px 0;
+    overflow: hidden;
+    }
+#reportsTransactions .sidepanel .default .filter {
+    overflow: hidden;
+    }
+#reportsTransactions .sidepanel .default .filter select.properties {
+    margin-bottom: 10px;
+    width: 100%;
+    }
+#reportsTransactions .sidepanel .default .filter li a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0c3f84;
+    display: inline;
+    }
+#reportsTransactions .sidepanel .default .filter li a:hover {
+    color: #0E62D5;
+    }
+#reportsTransactions .sidepanel .default .filter li a.on {
+    font-weight: bold;
+    color: #333;
+    cursor: default;
+    text-decoration: none;
+    }
+#reportsTransactions .sidepanel .default .filter table {
+    background: #ddd;
+    width: 100%;
+    margin-top: 15px;
+    }
+#reportsTransactions .sidepanel .default .filter td {
+    padding: 5px 5px 5px 20px;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    }
+#reportsTransactions .sidepanel .default .filter td:first-child {
+    font-weight: bold;
+    color: #666;
+    }
+#reportsTransactions .sidepanel .default .export {
+    padding: 15px 0 30px 0;
+    }
+#reportsTransactions .sidepanel .default .export > a.mini.button{
+    margin-right: 5px;
+    }
+
+    
+/* =add transaction
+----------------------------------------------- */
+#reportsTransactions .sidepanel .editTransaction {
+    }
+#reportsTransactions .sidepanel .editTransaction .cancel {
+    float: right;
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+    }
+#reportsTransactions .sidepanel .editTransaction ul.tabs  {
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    float: left;
+    }
+#reportsTransactions .sidepanel .editTransaction ul.tabs li{
+    float: left;
+    padding: 3px 10px 3px 10px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    color: #0c3f84;
+    cursor: pointer;
+    }
+#reportsTransactions .sidepanel .editTransaction ul.tabs li:hover{
+    background: #333;
+    color: #fff;
+    }
+#reportsTransactions .sidepanel .editTransaction ul.tabs li.on{
+    color: #000;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 50;
+    cursor: default;
+    }
+#reportsTransactions .sidepanel .editTransaction ul.tabs li.on:hover{
+    background: #fff;
+    }
+
+    
+/* =edit transaction
+----------------------------------------------- */
+#reportsTransactions .sidepanel .form{
+    clear: both;
+    display: none;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    top: -1px;
+    position: relative;
+    overflow: hidden;
+    }
+#reportsTransactions .sidepanel .form.on{
+    display: block;
+    }
+#reportsTransactions .sidepanel .form p{
+    margin-bottom: 10px;
+    }
+#reportsTransactions .sidepanel .form .notice{
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #F9F8BC;
+    }
+#reportsTransactions .sidepanel .form .notice a{
+    font-weight: bold;
+    color: #0c3f84;
+    }
+#reportsTransactions .sidepanel .form .info{
+    color: #666;
+    }
+#reportsTransactions .sidepanel .form .field  {
+    margin-bottom: 15px;
+    }
+#reportsTransactions .sidepanel .form .field label {
+    font-weight: bold;
+    }
+#reportsTransactions .sidepanel .form .field span {
+    font: normal 10px Verdana;
+    color: #666;
+    padding: 0 0 0 10px;
+    }
+#reportsTransactions .sidepanel .form .field select {
+    margin: 5px 0 0 0;
+    width: 170px;
+    }
+#reportsTransactions .sidepanel .form .field input {
+    display: block;
+    margin: 5px 0 0 0;
+    width: 165px;
+    }
+#reportsTransactions .sidepanel .form .field input.short {
+    width: 70px;
+    }
+#reportsTransactions .sidepanel .form .field input.datefield {
+    width: 100px;
+    background: url("../img/ico/date.png") no-repeat 2px center;
+    padding-left: 22px;
+    }
+    
+    

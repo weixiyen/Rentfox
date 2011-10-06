@@ -1,0 +1,50 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		account = new AccountManage;
+	});
+</script>
+<div class="page" id="accountManage">
+	<div class="left"><div class="wrap">
+		<div class="row">
+			<label>Name</label>
+			<div class="item"><span id="editName"></span></div>
+		</div>
+		<div class="row">
+			<label>Email</label>
+			<div class="item"><span id="editEmail"></span></div>
+		</div>
+		<div class="row">
+			<label>Phone</label>
+			<div class="item"><span id="editPhone"></span></div>
+		</div>
+		<div class="row">
+			<label>Username</label>
+			<div class="item" id="displayUsername"></div>
+		</div>
+		<div class="row">
+			<label>Password</label>
+			<div class="item"><a id="pwLink" class="link">Change Password</a></div>
+		</div>
+		
+		<div class="row last">
+			<label>Delete</label>
+			<div class="item"><a id="deleteAccount" class="deleteAccount">Delete Account</a></div>
+		</div>
+	</div></div>
+	<div class="right">
+		<div class="sect">
+			<h3><span id="managerFirstName"></span>'s stats</h3>
+			<p>
+				Created on ${c.created}<br />
+				Owner of ${c.propertiesOwned} ${c.propertyLabel}
+			</p>
+		</div>
+		<div class="sect last">
+			<p id="manages"></p>
+			<div id="myProperties"></div>
+		</div>
+		
+	</div>
+</div>
+<%inherit file="/base.html"/>

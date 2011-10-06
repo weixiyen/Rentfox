@@ -1,0 +1,34 @@
+[Tue Jul 20 22:11:44 2010] [error] /usr/local/lib/python2.6/dist-packages/AuthKit-0.4.4-py2.6.egg/authkit/users/__init__.py:61: DeprecationWarning: the md5 module is deprecated; use hashlib instead
+[Tue Jul 20 22:11:44 2010] [error]   import md5 as _md5
+[Tue Jul 20 22:12:04 2010] [error] [client 127.0.0.1] mod_wsgi (pid=26449): Exception occurred processing WSGI script '/var/apps/rentfox_dev/dispatch.wsgi'.
+[Tue Jul 20 22:12:04 2010] [error] [client 127.0.0.1] TypeError: sequence of string values expected, value of type literal found
+[Tue Jul 20 22:12:32 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'weixiyen'
+[Tue Jul 20 22:12:32 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:12:32 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'admin'
+[Tue Jul 20 22:12:32 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:12:32 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'Rent'
+[Tue Jul 20 22:12:32 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:12:40 2010] [error] [client 127.0.0.1] Error - <type 'exceptions.OSError'>: [Errno 13] Permission denied: '/var/apps/rentfox_dev/data/sessions/container_file_lock/7/70'
+[Tue Jul 20 22:17:58 2010] [error] [client 127.0.0.1] Error - <type 'exceptions.OSError'>: [Errno 13] Permission denied: '/var/apps/rentfox_dev/data/sessions/container_file_lock/9/94'
+[Tue Jul 20 22:18:45 2010] [error] [client 127.0.0.1] Error - <type 'exceptions.OSError'>: [Errno 13] Permission denied: '/var/apps/rentfox_dev/data/sessions/container_file_lock/4/4c'
+[Tue Jul 20 22:22:06 2010] [error] /usr/local/lib/python2.6/dist-packages/AuthKit-0.4.4-py2.6.egg/authkit/users/__init__.py:61: DeprecationWarning: the md5 module is deprecated; use hashlib instead
+[Tue Jul 20 22:22:06 2010] [error]   import md5 as _md5
+[Tue Jul 20 22:22:06 2010] [error] [client 127.0.0.1] Error - <type 'exceptions.OSError'>: [Errno 13] Permission denied: '/var/apps/rentfox_dev/data/sessions/container_file_lock/8/8c'
+[Tue Jul 20 22:22:08 2010] [error] [client 127.0.0.1] Error - <type 'exceptions.OSError'>: [Errno 13] Permission denied: '/var/apps/rentfox_dev/data/sessions/container_file_lock/4/40'
+[Tue Jul 20 22:22:09 2010] [error] [client 127.0.0.1] Error - <type 'exceptions.OSError'>: [Errno 13] Permission denied: '/var/apps/rentfox_dev/data/sessions/container_file_lock/e/e4'
+[Tue Jul 20 22:22:14 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'weixiyen'
+[Tue Jul 20 22:22:14 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:14 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'admin'
+[Tue Jul 20 22:22:14 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:14 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'Rent'
+[Tue Jul 20 22:22:14 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:30 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'rentfox'
+[Tue Jul 20 22:22:30 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:34 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value '%%%'
+[Tue Jul 20 22:22:34 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:36 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value '3f6961f4-944a-11df-b941-fefd4acff6a9'
+[Tue Jul 20 22:22:36 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:36 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value '6cd4b990-944a-11df-a8c2-fefd4acff6a9'
+[Tue Jul 20 22:22:36 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])
+[Tue Jul 20 22:22:37 2010] [error] /usr/local/lib/python2.6/dist-packages/SQLAlchemy-0.5.4p2-py2.6.egg/sqlalchemy/engine/default.py:242: SAWarning: Unicode type received non-unicode bind param value 'manager'
+[Tue Jul 20 22:22:37 2010] [error]   param[key.encode(encoding)] = processors[key](compiled_params[key])

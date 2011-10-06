@@ -1,0 +1,417 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		unit = new UnitView({propertyId:'${c.curPropId}', unitId:'${c.unit.id}'});
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="unitView">
+	
+	<div class="content">
+		<div class="menu">
+			<div class="miniProp">
+				<div class="pic"><div class="thumb"><span class="frame"><img src="${c.property.photo}" /></span></div></div>
+				<div class="info">
+					<h3>
+						% if c.property.type == 'single':
+							${c.property.name}
+						% else:
+							<a href="/property/view/${c.property.id}">${c.property.name}</a> #${c.unit.label}
+						% endif
+					</h3>
+					<p>
+						${c.property.address}<br />
+						${c.property.city}, ${c.property.state}, ${c.property.zip}<br />
+						<a href="/property/setup/${c.curPropId}/${c.unit.id}" class="mini button"><span><img src="/styles/img/ico/building_edit.png" />Property Setup</span></a>
+					</p>
+				</div>
+			</div>
+			<div class="no tenant" id="noTenants">
+				This unit has no tenants right now.
+			</div>
+			<div class="tenant" id="tenants">
+				<div class="tenantedit">
+					<div class="moremenu"><div class="wrap">
+						<label></label>
+						<div class="options">
+							<ul>
+								<li id="addTenant">Add Tenant</li>
+								<li id="editTenant">Edit Tenant</li>
+								<li id="removeTenant">Remove</li>
+							</ul>
+						</div>
+					</div></div>
+				</div>
+				<div id="people"></div>
+				<div class="list">
+					<ul id="tenantList"></ul>
+				</div>
+			</div>
+			<ul class="nav" id="unitViewNav">
+				<li class="pulsenav on" id="pulseNav">
+					<dl>
+						<dt>Pulse</dt>
+						<dd>Recent unit activity</dd>
+					</dl>
+				</li>
+				<li class="unit" id="unitNav">
+					<dl>
+						<dt>Unit Info</dt>
+					</dl>
+				</li>
+				<li class="lease" id="leaseNav">
+					<dl>
+						<dt>Lease</dt>
+						<dd><select id="allLeasesDropdown"></select></dd>
+					</dl>
+				</li>
+				<li class="transactions" id="transactionsNav">
+					<dl>
+						<dt>Transactions</dt>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="right">
+			<div class="leaseStatus" id="leaseStatus"></div>
+			<div class="display"><div class="wrap">
+				<div class="module" id="pulseModule"><div class="wrap">
+					
+					<div class="pulse" id="unit-pulse"><div class="wrap">
+						<div class="filterList">
+							<label id="unit-pulse-label">Everything</label>
+							<div class="options">
+								<ul id="unit-pulse-options">
+									<li class="on" rel="all">Everything</li>
+									<li rel="lease">Lease</li>
+									<li rel="rent">Rent</li>
+									<li rel="warning">Warnings</li>
+									<li rel="transaction">Transactions</li>
+									<li rel="message">Messages</li>
+								</ul>
+							</div>
+						</div>
+						<div class="container"></div>
+					</div></div>
+					
+				</div></div>
+				<div class="module" id="unitModule"><div class="wrap">
+					<div class="unitedit">
+						<div class="moremenu"><div class="wrap">
+							<label></label>
+							<div class="options">
+								<ul>
+									<li id="edit-floorplan-link">Edit floor plan</li>
+								</ul>
+							</div>
+						</div></div>
+					</div>
+					<div class="head">
+						% if c.floorplan.photo:
+						<div class="floorplan"><span><img src="${c.floorplan.photo}" height="70" id="floorplan-img" /></span></div>
+						% endif
+						<div class="info">
+							<h3>${c.floorplan.label} floorplan</h3>
+							<p>${c.floorplan.sqft} sqft, ${c.floorplan.beds} br, ${c.floorplan.baths} ba</p>
+						</div>
+					</div>
+					
+					
+					<div class="description">
+						${c.floorplan.description}
+					</div>
+					
+					<h5>Upload photos</h5>
+					<em>Photos here will be re-used in other places, such as advertising your unit on Craigslist.</em>
+					<div class="picViewer" id="unitPicViewer">
+						<div class="droptext">Drop photos here!</div>
+						<div class="picDisplay"><span class="frame"></span></div>
+						<div class="picBar">
+							<div class="picEditor">
+								<div class="picOptions">
+									<ul>
+										<li class="add" id="unitPicViewer-upload">Upload more</li>
+										<li class="delete" id="unitPicViewer-delete">Delete this</li>
+									</ul>
+								</div>
+							</div>
+							<div class="picNav">
+								<div class="left"><span>Previous</span></div>
+								<div class="center">15 of 20</div>
+								<div class="right"><span>Next</span></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="description">${c.unit.description}</div>
+	
+				</div></div>
+				<div class="module" id="leaseModule"><div class="wrap">
+					<div id="leaseDisplayMode" class="view">
+						<div class="leaseOpts">
+							<div class="moremenu"><div class="wrap">
+								<label></label>
+								<div class="options">
+									<ul>
+										<li id="createLease">Create New Lease</li>
+										<li id="editLease">Edit This Lease</li>
+										<li id="deleteLease">Delete Lease</li>
+									</ul>
+								</div>
+							</div></div>
+						</div>
+						<h3 id="displayLeaseTitle"></h3>
+						<div class="leaseDetails">
+							<div class="row">
+								<div class="left">Start</div>
+								<div class="right" id="displayContractStart"></div>
+							</div>
+							<div class="row" id="showContractEnd">
+								<div class="left">Contract up</div>
+								<div class="right" id="displayContractEnd"></div>
+							</div>
+							<div class="row">
+								<div class="left">Move out</div>
+								<div class="right" id="displayMoveout"></div>
+							</div>
+							<div class="row">
+								<div class="left">Deposit on hold</div>
+								<div class="right" id="displayDeposit"></div>
+							</div>
+							<div class="row">
+								<div class="left">Rent</div>
+								<div class="right" id="displayRentDue"></div>
+							</div>
+							<div class="row">
+								<div class="left">Late Rent</div>
+								<div class="right" id="displayLateRule"></div>
+							</div>
+						</div>
+						<div class="tenants">
+							<div class="row">
+								<div class="left">
+									<a id="addTenantToLeaseButton" class="mini button">
+									<span><img src="/styles/img/ico/user_add.png" />Add Tenant</span></a>
+								</div>
+								<div class="right">
+									<ul id="leaseTenants" class="lease-tenants"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="leaseEditMode" class="editMode view">
+						<div class="leaseForm">
+							<div class="row break">
+								<div class="left">Lease type</div>
+								<div class="right">
+									<input type="checkbox" id="lease-m2m" />
+									<label for="lease-m2m">This lease is month-to-month only.</label>
+									<div class="indented">e.g. tenant can end this lease at any time without penalty - provided they give proper notice.</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="left">Contract start</div>
+								<div class="right" id="startDateWrap"><input type="text" class="date" id="lease-start" /></div>
+							</div>
+							<div id="contractDates">
+								<div class="row break">
+									<div class="left">Contract end</div>
+									<div class="right" id="leaseCheckboxWrap"><input type="text" class="date" id="lease-end" />
+										<div>
+											<input type="checkbox" id="m2mafter" />
+											<label for="m2mafter">month-to-month after</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="left">Monthly rent</div>
+								<div class="right">
+									<input type="text" class="money" id="lease-rent" />
+									<span>paid every</span>
+									<select id="lease-rent-due">
+										<option value="1">1st</option>
+										<option value="2">2nd</option>
+										<option value="3">3rd</option>
+										<option value="4">4th</option>
+										<option value="5">5th</option>
+										<option value="6">6th</option>
+										<option value="7">7th</option>
+										<option value="8">8th</option>
+										<option value="9">9th</option>
+										<option value="10">10th</option>
+										<option value="11">11th</option>
+										<option value="12">12th</option>
+										<option value="13">13th</option>
+										<option value="14">14th</option>
+										<option value="15">15th</option>
+										<option value="16">16th</option>
+										<option value="17">17th</option>
+										<option value="18">18th</option>
+										<option value="19">19th</option>
+										<option value="20">20th</option>
+										<option value="21">21st</option>
+										<option value="22">22nd</option>
+										<option value="23">23rd</option>
+										<option value="24">24th</option>
+										<option value="25">25th</option>
+										<option value="26">26th</option>
+										<option value="27">27th</option>
+										<option value="28">28th</option>
+										<option value="29">29th</option>
+										<option value="30">30th</option>
+										<option value="31">31st</option>
+									</select>
+									
+									<div><input type="checkbox" id="prevPaid" checked="checked" />
+									<label for="prevPaid">all previous months paid</label></div>
+								</div>
+								
+							</div>
+							
+							<div class="row break">
+								<div class="left">Deposit</div>
+								<div class="right">
+									<input type="text" class="money" id="lease-deposit" />
+									<div>
+										<input type="checkbox" id="lease-depositPaid" />
+										<label id="lease-depositPaid">tenant has paid already</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="left">Late fee</div>
+								<div class="right">
+									<input type="text" id="lease-lateFee" class="mini" />
+									<select id="lease-lateFee-interval">
+										<option value="1">each day late</option>
+										<option value="2">only once</option>
+									</select>
+								</div>
+							</div>
+							<div class="row break">
+								<div class="left">Grace period</div>
+								<div class="right">
+									<input type="text" class="mini" id="lease-grace" /><span>days</span>
+								</div>
+							</div>
+							<div class="row">
+								<a class="button primary" id="saveLease"><span>Save Lease</span></a>
+								<a class="button cancel" id="cancelLeaseEditor"><span>Cancel</span></a>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div></div>
+				<div class="module" id="transactionsModule"><div class="wrap">
+				
+					<div class="action bill" id="billResidents">
+						<div class="row">
+							<div class="left">Bill amount</div>
+							<div class="right"><input type="text" class="money" /></div>
+						</div>
+						<div class="row">
+							<div class="left">Due date</div>
+							<div class="right"><input type="text" class="date" id="billDueDate" /></div>
+						</div>
+						<div class="row">
+							<div class="left">Message</div>
+							<div class="right"><textarea id="billMessage" rows="3"></textarea></div>
+						</div>
+						<div class="row break">
+							<div class="left">What happens?</div>
+							<div class="right">
+								All residents will be notified of this bill via email and SMS.
+							</div>
+						</div>
+						<div class="submit">
+							<a class="button primary"><span>Bill Residents</span></a>
+							<a class="button cancel"><span>Cancel</span></a>
+						</div>
+					</div>
+					
+					<div class="action pay" id="payResidents">
+						<div class="row">
+							<div class="left">Pay amount</div>
+							<div class="right"><input type="text" class="money" /></div>
+						</div>
+						<div class="row">
+							<div class="left">Message</div>
+							<div class="right"><textarea id="payMessage" rows="3"></textarea></div>
+						</div>
+						<div class="row break">
+							<div class="left">Instructions</div>
+							<div class="right">
+								<em>Please send the residents a check</em> as our beta mode does not cover online payment.
+								All residents will be notified of this intended payment via email and SMS.
+							</div>
+						</div>
+						<div class="submit">
+							<a class="button primary"><span>Send intent to pay</span></a>
+							<a class="button cancel"><span>Cancel</span></a>
+						</div>
+					</div>
+					
+					<div id="transactionsDisplay">
+						<!-- hidden bill residents
+						<div class="optButtons" id="optButtons">
+							<a class="button" id="billResidentsButton"><span>Bill Residents</span></a>
+							<a class="button" id="payResidentsButton"><span>Pay Residents</span></a>
+						</div>
+						 -->
+						
+						<div class="list">
+							<div class="filterList">
+								<label id="transaction-label">Everything</label>
+								<div class="options">
+									<ul id="transaction-options">
+										<li type="all" class="on">Everything</li>
+										<li type="Rent">Rent</li>
+										<li type="Fee">Fees</li>
+										<li type="Deposit">Deposits</li>
+										<li type="Deposit Return">Deposit Returns</li>
+										<li type="Refund">Refunds</li>
+										<li type="other">Other</li>
+									</ul>
+								</div>
+							</div>
+							<div id="transactionList">
+							</div>
+						</div>
+					</div>
+				</div></div>
+			</div></div>
+		
+		</div>
+		
+	</div>
+	
+	% if c.property.type == 'multi':
+	<div class="unitnav">
+		<!-- unit scroller (re-usable) -->
+		<div class="unitScroller" id="unitScroller">
+			<div class="label">Unit #</div>
+			<div class="manualInput">
+				<input type="text" alt="filter" />
+			</div>
+			<div class="scrollFrame" id="scrollFrame"><ul></ul></div>
+			<div class="controls">
+				<div class="slider"></div>
+			</div>
+		</div>
+		<!-- end unit scroller -->
+	</div>
+	% endif
+</div>
+
+<div id="previewModal">
+	<div class="close">Close Window</div>
+	<img />
+</div>
+
+<%inherit file="/base.html"/>

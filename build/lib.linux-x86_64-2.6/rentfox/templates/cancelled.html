@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+    <title>Rentfox | Account cancelled</title>
+	<%include file="externalfiles.html"/>
+</head>
+<body id="activatepage">
+    <div id="eventStatus">loading...</div>	
+    <div id="foxhelper">
+            <img src="/styles/img/foxhelper_shadow.png" class="thefox" />
+            <div class="foxpanel"><div class="panelwrap">
+                    <div class="display">
+                        <div class="wrap">
+                            
+
+                            	<div class="error on">
+                            		Your Rentfox account has been cancelled.<br /><br />
+                            		If you believe this to be a mistake, please contact us immediately
+                            		at ${c.support_email} and we will work to restore your data.
+                            	</div>
+								
+								<div class="action">
+                                    <a class="button primary" href="/signout"><span>Try again &raquo;</span></a>
+                                </div>
+                        
+                        </div>
+                    </div>
+            </div></div>
+    </div>
+    <a href="/" class="footer">Rentfox Homepage</a>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var activate = new Activate('${c.activation_code}');
+        });
+    </script>
+    
+</body>
+</html>
+

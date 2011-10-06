@@ -1,0 +1,17 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+	<div class="rentDiv">
+        <p>
+            <label>Change rent for this month only</label>
+            <input type="text" id="rentAmount" value="${c.rentAmount}" />
+        </p>
+        
+	</div>
+	
+	<div class="action">
+		<a class="primary button" id="changeRent"><span>Record payment</span></a>
+		<a class="button foxClose"><span>Cancel</span></a>
+	</div>
+
+</div>

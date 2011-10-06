@@ -1,0 +1,15 @@
+
+.suggestSearch {
+	position: absolute;
+	background-color: #fff;
+	width: 168px;
+	border:1px solid #888;
+	cursor: pointer;
+	}
+	
+.suggestSearch > div {
+	padding:3px;
+	}
+.suggestSearch > div.on {
+	background-color:#DBF0FA;
+	}

@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rentfox/!svn/ver/389/rentfox/rentfox/tests/functional
+END
+test_tenant.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_tenant.py
+END
+test_auth.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rentfox/!svn/ver/196/rentfox/rentfox/tests/functional/test_auth.py
+END
+test_search.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rentfox/!svn/ver/358/rentfox/rentfox/tests/functional/test_search.py
+END
+test_reports.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rentfox/!svn/ver/188/rentfox/rentfox/tests/functional/test_reports.py
+END
+test_tenant_lease.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_tenant_lease.py
+END
+test_unit.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_unit.py
+END
+test_transaction.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_transaction.py
+END
+test_unitDisplay.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rentfox/!svn/ver/303/rentfox/rentfox/tests/functional/test_unitDisplay.py
+END
+test_chart.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rentfox/!svn/ver/346/rentfox/rentfox/tests/functional/test_chart.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/__init__.py
+END
+test_company.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rentfox/!svn/ver/260/rentfox/rentfox/tests/functional/test_company.py
+END
+test_help.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rentfox/!svn/ver/389/rentfox/rentfox/tests/functional/test_help.py
+END
+test_lease.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_lease.py
+END
+test_pulse.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_pulse.py
+END
+test_tenant_unit.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_tenant_unit.py
+END
+test_dashboard.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_dashboard.py
+END
+test_rent.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rentfox/!svn/ver/313/rentfox/rentfox/tests/functional/test_rent.py
+END
+test_property.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rentfox/!svn/ver/23/rentfox/rentfox/tests/functional/test_property.py
+END
+test_account.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rentfox/!svn/ver/51/rentfox/rentfox/tests/functional/test_account.py
+END
+test_contacts.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rentfox/!svn/ver/218/rentfox/rentfox/tests/functional/test_contacts.py
+END
+test_users.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rentfox/!svn/ver/145/rentfox/rentfox/tests/functional/test_users.py
+END
+test_marketing.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rentfox/!svn/ver/201/rentfox/rentfox/tests/functional/test_marketing.py
+END

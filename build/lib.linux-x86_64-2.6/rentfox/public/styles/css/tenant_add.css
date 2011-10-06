@@ -1,0 +1,104 @@
+/* =layout
+----------------------------------------------- */
+#tenantAdd {
+    overflow: auto;
+    }	
+#tenantAdd .header {
+    margin: 0 0 10px 15px;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    }	
+#tenantAdd strong {
+	font-weight: bold;
+	}
+#tenantAdd .createForm {
+    margin: 15px;
+    float: left;
+    }
+
+/* =create form
+----------------------------------------------- */
+#tenantAdd .createForm label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    }
+#tenantAdd .createForm label input {
+    display: block;
+    }
+#tenantAdd .createForm .tooltip {
+	background: #fff;
+	position: absolute;
+	margin: -75px 0 0 200px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	max-width: 200px;
+	}
+#tenantAdd .createForm .tooltip > .arrow {
+	position: absolute;
+	height: 23px;
+	width: 11px;
+	background: url('../img/hint_tooltip_left.png');
+	margin: 30px 0 0 -21px;
+	}
+#tenantAdd .createForm .tooltip h5 {
+	font-weight: bold;
+	padding: 0 0 10px 0;
+	}
+    
+/* =tenant matches
+----------------------------------------------- */
+#tenantAdd .tenantMatches {
+    display: none;
+    margin: 15px;
+    }
+#tenantAdd .tenantMatches .tenants{
+    float: left;
+    width: 380px;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    min-height: 120px;
+    }
+#tenantAdd .tenantMatches .prompt{
+    float: left;
+    margin-right: 20px;
+    padding-right: 40px;
+    }
+#tenantAdd .tenantMatches h1 {
+    font: bold 18px Verdana;    
+    }
+#tenantAdd .tenantMatches p {
+    font: 14px Verdana;
+    padding: 20px 0 20px 0;
+    }
+#tenantAdd .tenantMatches .tenant {
+    clear: both;
+    overflow: auto;
+    margin: 0 0 20px 0;
+    }
+#tenantAdd .tenantMatches .tenant .button {
+    float: right;
+    margin: 10px 0 0 0;
+    }
+#tenantAdd .tenantMatches .tenant .pic {
+    float: left;
+    }
+#tenantAdd .tenantMatches .tenant dl {
+    float: left;
+    margin: 0 0 0 10px;
+    }
+#tenantAdd .tenantMatches .tenant dt {
+    margin-bottom: 4px;
+    font-weight: bold;
+    }
+#tenantAdd .tenantMatches .tenant dd {
+    margin-bottom: 4px;
+    }
+#tenantAdd .tenantMatches .submit {
+    margin-bottom: 40px;
+    overflow: auto;
+    }

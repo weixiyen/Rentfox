@@ -1,0 +1,101 @@
+/* =layout
+----------------------------------------------- */
+#companyManage {
+	overflow: hidden;
+	}
+#companyManage > .left {
+	float: left;
+	width: 620px;
+	margin: 20px 0 40px 0;
+	}
+#companyManage > .right {
+	margin-left: 620px;
+	margin: 20px 0 40px 0;
+	border-left: 1px solid #ccc;
+	overflow: hidden;
+	}
+#companyManage a {
+	cursor: pointer;
+	}
+
+/* =left
+----------------------------------------------- */
+#companyManage > .left > .wrap {
+	padding: 0 50px 0 15px;
+	}
+#companyManage > .left .row {
+	padding: 10px 0 3px 0;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	font: 12px Verdana;
+	}
+#companyManage > .left .row > label {
+	float: left;
+	width: 120px;
+	font-weight: bold;
+	color: #666;
+	}
+#companyManage > .left .row a.link {
+	color: #0c3f84;
+	text-decoration: underline;
+	}
+#companyManage > .left .row a.deleteAccount {
+	color: red;
+	text-decoration: underline;
+	}
+#companyManage > .left .row.last {
+	border: 0;
+	}
+#companyManage > .left .row .item {
+	float: left;
+	}
+#companyManage.superuser > .left .row .item > span:hover {
+	background: yellow;
+	cursor: pointer;
+	}
+#companyManage > .left .row .item .picViewer {
+	display: none;
+	}
+#companyManage > .left .row .item .mini.button {
+	float: right;
+	margin-right: 5px;
+	}
+#companyManage > .left .row .item .mini.button span {
+	padding-left: 10px;
+	}
+#companyManage > .left .row .item input {
+	margin-right: 5px;
+	}
+#companyManage > .left .row .item input.small {
+	width: 60px;
+	}
+#companyManage > .left .row .item input.mini {
+	width: 25px;
+	}
+
+/* =right
+----------------------------------------------- */
+#companyManage > .right .sect {
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	margin: 0 0 10px 20px;
+	}
+#companyManage > .right .sect.last {
+	border: none;
+	}
+#companyManage > .right h3 {
+	font: bold 13px Verdana;
+	margin: 0 0 10px 0;
+	}
+#companyManage > .right p {
+	line-height: 1.7em;
+	padding: 0 0 10px 0;
+	}
+#companyManage > .right .sect a {
+	float: left;
+	clear: both;
+	color: #0c3f84;
+	display: block;
+	margin: 0 0 5px 0;
+	}

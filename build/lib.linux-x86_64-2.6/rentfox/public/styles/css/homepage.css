@@ -1,0 +1,389 @@
+/* =fonts
+----------------------------------------------- */
+@font-face {
+	font-family: 'ChunkFiveRoman';
+	src: url('../fonts/chunkfive/chunkfive-webfont.eot');
+	src: local('☺'), url('../fonts/chunkfive/chunkfive-webfont.woff') format('woff'), url('../fonts/chunkfive/chunkfive-webfont.ttf') format('truetype'), url('../fonts/chunkfive/chunkfive-webfont.svg#webfontDV3CjRmz') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* =background
+----------------------------------------------- */
+body#homepage {
+    background: #fafafa center top no-repeat url('../img/home_bg.png');
+    }
+#homepage .all {
+    width: 984px;
+    margin: auto;
+    }
+#homepage a {
+    cursor: pointer;
+    }
+#homepage strong {
+    font-weight: bold;
+    }
+    
+/* =leads
+----------------------------------------------- */
+#homepage .leads {
+	height: 76px;
+	padding-right: 5px;
+	}
+#homepage .leads > .wrap {
+	width: 465px;
+	float: right;
+	background: #eee;
+	color: #333;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	}
+#homepage .leads > .wrap > .wrap {
+	padding: 7px;
+	font-size: 12px;
+	}
+#homepage .leads a {
+	float: right;
+	}
+	
+/* =sign in box
+----------------------------------------------- */
+#homepage .login {
+    float: right;
+    margin: 0 10px 8px 0;
+    }
+#homepage .login div {
+    float: left;
+    margin: 0 3px 0 0;
+    }
+#homepage .login .login {
+    width: 87px;
+    height: 23px;
+    display: block;
+    background: no-repeat url('../img/login_button_bg.png');
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    }
+#homepage .login div.signup {
+    background-position: 0 -23px;
+    }
+#homepage .login div:active, #homepage .login div.active {
+    background-position: 0 -46px;
+    }
+#homepage .login span {
+    display: block;
+    padding: 4px 0 0 0;
+    }
+#homepage .login input {
+    border: 0;
+    padding: 0;
+    margin: 4px 0 0 0;
+    background: none;
+    color: #666;
+    }
+#homepage .login input.active {
+    font: bold 12px Verdana;
+    color: #000;
+    }
+#homepage .login .username input {
+    width: 140px;    
+    }
+#homepage .login .password input {
+    width: 127px;
+    }
+
+/* =main panel - tour & slides
+----------------------------------------------- */
+#homepage .promoMain {
+    clear: both;
+    overflow: hidden;
+    }
+#homepage .promoMain .tour {
+    float: left;
+    padding: 200px 0 0 30px;
+    }
+#homepage .promoMain .tour a.tourButton {
+    height: 263px;
+    width: 408px;
+    background: url('../img/home_tour.png') no-repeat;
+    display: block;
+    }
+#homepage .promoMain .tour a.tourButton:active {
+    background-position: 0 -277px;
+    }
+#homepage .promoMain .slides {
+    float: right;
+    }
+#homepage .promoMain .slideViewer {
+    height: 489px;
+    width: 487px;
+    background: no-repeat url('../img/slide_1.png');
+    cursor: pointer;
+    }
+#homepage .promoMain .slideNav {
+    margin: 465px 0 0 210px;
+    position: absolute;
+    }
+#homepage .promoMain .slideNav li{
+    display: block;
+    float: left;
+    height: 8px;
+    width: 8px;
+    margin-right: 5px;
+    background: url('../img/slide_nav.png') no-repeat;
+    cursor: pointer;
+    }
+#homepage .promoMain .slideNav li:hover{
+    background-position: 0 -8px;
+    }
+#homepage .promoMain .slideNav li.on{
+    background-position: 0 -16px;
+    }
+
+/* =slideshow
+----------------------------------------------- */
+#homepage .promoTour {
+	position: absolute;
+	background: #000;
+	margin: auto;
+	height: 490px;
+	width: 985px;
+	z-index: 100;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: none;
+	}
+#homepage .promoTour.on {
+	display: block;
+	}
+#homepage .promoTour .content {
+	display: none;
+	}
+#homepage .promoTour .close {
+	position: absolute;
+	background: #111;
+	width: 984px;
+	height: 40px;
+	text-align: center;
+	margin-top: 449px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+	overflow: hidden;
+	color: #999;
+	border-top: 1px solid #333;
+	}
+#homepage .promoTour .close:hover {
+	color: #fff;
+	background: #9b0101;
+	border-top: 1px solid #ff9ca6;
+	}
+#homepage .promoTour .close span {
+	padding: 9px 0 0 0;
+	display: block;
+	font: 16px Verdana;
+	}
+#homepage .promoTour .content .pane {
+	padding: 50px;
+	display: none;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	}
+#homepage .promoTour .content h3 {
+	font-family: 'ChunkFiveRoman', sans-serif;
+	color: #fff;
+	font-size: 50px;
+	margin-bottom: 30px;
+	text-shadow: 1px 2px #000;
+	}
+#homepage .promoTour .content h4 {
+	font-family: 'ChunkFiveRoman', sans-serif;
+	color: #fff;
+	font-size: 40px;
+	margin-bottom: 20px;
+	text-shadow: 1px 2px #000;
+	}
+#homepage .promoTour .content span.orange {
+	color: #ff6800;
+	}
+#homepage .promoTour .content p {
+	color: #ddd;
+	font: 25px "Trebuchet MS";
+	line-height: 1.5em;
+	margin-bottom: 20px;
+	}
+#homepage .promoTour .content .center {
+	text-align: center;
+	}
+#homepage .promoTour .content a {
+	color: #008eff;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+	}
+#homepage .promoTour .content a:hover {
+	color: #78acfe;
+	}
+#homepage .promoTour .content a:active {
+	color: #ff3400;
+	}
+#homepage .promoTour .content a.orange {
+	color: #ff6800;
+	}
+#homepage .promoTour .content a.orange:hover {
+	color: #ffc687;
+	}
+#homepage .promoTour .content em {
+	font-weight: bold;
+	font-style: italic;
+	}
+#homepage .promoTour .tourpane-2 {
+	background: url('../img/tour_1.png') right top no-repeat;
+	}
+#homepage .promoTour .tourpane-3 {
+	background: url('../img/tour_2.png') right top no-repeat;
+	}
+#homepage .promoTour .tourpane-4 {
+	background: url('../img/tour_3.png') right top no-repeat;
+	}
+#homepage .promoTour .tourpane-5 {
+	background: url('../img/tour_4.png') right top no-repeat;
+	}
+#homepage .promoTour .tourpane-6 {
+	background: url('../img/tour_5.png') right top no-repeat;
+	}
+#homepage .promoTour .tourpane-7 {
+	background: url('../img/tour_6.png') right top no-repeat;
+	}
+
+/* =promos
+----------------------------------------------- */
+#homepage .promos {
+    overflow: hidden;
+    padding: 0 0 34px 0;
+    }
+#homepage .promos .promo {
+    float: left;
+    width: 246px;
+    }
+#homepage .promos .promo.new {
+    background: no-repeat url('../img/promo_label_new.png') right top;
+    }
+#homepage .promos .promo .wrap {
+    padding: 25px 15px 0 15px;    
+    }
+#homepage .promos .promo .comingSoon {
+    float: right;
+    display: block;
+    width: 78px;
+    height: 16px;
+    background: no-repeat url('../img/coming_soon_bg.png');
+    color: #fff;
+    font: bold 11px "Myriad Pro", Arial;
+    text-align: center;
+    line-height: 1.6em;
+    }
+#homepage .promos .promo h3 {
+    font: bold 16px "Myriad Pro", Arial;
+    }
+#homepage .promos .promo h5 {
+    font: 16px "Myriad Pro", Arial;
+    color: #666;
+    padding: 10px 0 13px 0;
+    }
+#homepage .promos .promo p {
+    font: 13px "Myriad Pro", Arial;
+    height: 100px;
+    line-height: 1.3em;
+    }
+
+/* =about and pricing
+----------------------------------------------- */
+#homepage .lesserPromo {
+    overflow: hidden;
+    }
+#homepage .lesserPromo .whyRentfox {
+    width: 740px;
+    background: yellow;
+    float: left;
+    background: url('../img/promo_savetime.png') no-repeat 20px 17px;
+    }
+#homepage .lesserPromo .whyRentfox h3 {
+    font: bold 18px "Myriad Pro", Arial;
+    padding: 26px 0 10px 220px;
+    }
+#homepage .lesserPromo .whyRentfox p {
+    font: 16px "Myriad Pro", Arial;
+    color: #454545;
+    line-height: 1.5em;
+    padding: 0 30px 15px 220px;
+    }
+#homepage .lesserPromo .pricing  {
+    float: left;
+    width: 240px;
+    }
+#homepage .lesserPromo .pricing h3 {
+    font: bold 15px "Myriad Pro", Arial;
+    padding: 30px 15px 10px 15px;
+    }
+#homepage .lesserPromo .pricing p {
+    font: 12px "Myriad Pro", Arial;
+    color: #666;
+    padding: 0 15px 0 15px;
+    line-height: 1.5em;
+    }
+
+/* =footer
+----------------------------------------------- */
+#homepage .footer {
+    text-align: center;
+    padding: 30px 20px 65px 20px;
+    overflow: hidden;
+    }
+#homepage .footer .links {
+    color: #ccc;
+    font-size: 9px;
+    }
+#homepage .footer .links a {
+    color: #333;
+    padding: 0 10px 0 10px;
+    font-size: 11px;
+    text-decoration: underline;
+    }
+#homepage .footer .links a:active {
+    color: #ff5a00;
+    }
+#homepage .footer .copyright {
+    text-align: center;
+    color: #999;
+    width: 330px;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    background: url('../img/gray_fox.png') no-repeat left center;
+    }
+
+/* =foxhelper
+----------------------------------------------- */
+#homepage #foxhelper {
+    margin-bottom: -300px;    
+    }
+
+#homepage #eventStatus {
+    top: 0;    
+    }

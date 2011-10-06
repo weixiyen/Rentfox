@@ -1,0 +1,86 @@
+/* =layout
+----------------------------------------------- */
+#help {
+	overflow: hidden;
+	}
+#help > .left {
+	float: left;
+	width: 620px;
+	margin: 15px 0 40px 0;
+	border-right: 1px solid #ccc;
+	}
+#help > .right {
+	margin-left: 620px;
+	margin: 20px 0 40px 0;
+	overflow: hidden;
+	}
+#help a {
+	cursor: pointer;
+	}
+
+/* =right
+----------------------------------------------- */
+#help > .left > .wrap {
+	padding: 0 30px 0 15px;
+	}
+#help > .left h1 {
+	font: 20px Verdana;
+	}
+#help > .left ul.questions {
+	margin: 20px 0 0 0;
+	font: 16px Verdana;
+	}
+#help > .left ul.questions > li {
+	margin: 0 0 10px 0;
+	}
+#help > .left ul.questions > li > a{
+	color: blue;
+	}
+#help > .left ul.answers {
+	margin: 20px 0 0 0;
+	padding: 20px 0 20px 0;
+	border-top: 1px dotted #ccc;
+	font: 13px Verdana;
+	}
+#help > .left ul.answers > li {
+	padding: 40px 0 0 0;
+	}
+#help > .left ul.answers > li > h5 {
+	font: bold 16px Verdana;
+	padding: 0 0 10px 0;
+	}
+#help > .left ul.answers > li > p {
+	padding: 0 0 10px 0;
+	}
+#help > .left ul.answers ol {
+	list-style: decimal;
+	padding: 0 0 0 20px;
+	margin-left: 10px;
+	}
+	
+/* =right
+----------------------------------------------- */
+#help > .right .sect {
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	margin: 0 0 10px 20px;
+	}
+#help > .right .sect.last {
+	border: none;
+	}
+#help > .right h3 {
+	font: bold 13px Verdana;
+	margin: 0 0 10px 0;
+	}
+#help > .right p {
+	line-height: 1.7em;
+	padding: 0 0 10px 0;
+	}
+#help > .right .sect a {
+	float: left;
+	clear: both;
+	color: #0c3f84;
+	display: block;
+	margin: 0 0 5px 0;
+	}

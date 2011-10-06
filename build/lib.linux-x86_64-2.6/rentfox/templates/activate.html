@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+    <title>Rentfox | Account Activation</title>
+	<%include file="externalfiles.html"/>
+</head>
+<body id="activatepage">
+    <div id="eventStatus">loading...</div>	
+    <div id="foxhelper">
+            <img src="/styles/img/foxhelper_shadow.png" class="thefox" />
+            <div class="foxpanel"><div class="panelwrap">
+                    <div class="display">
+                        <div class="wrap">
+                        	
+                        	<form id="activationForm" method="post" onsubmit="javascript:return false;">
+                        		<div class="error" id="activateError"></div>
+                            	
+	                            <label for="username">Desired Username</label>
+	                            <input type="text" id="username" name="username" />
+	                            
+	                            <label for="password">Desired Password</label>
+	                            <input type="password" id="password" name="password" />
+	                            
+	                            <label for="password">Secret Reminder<span>...to help trigger memory of your password</span></label>
+	                            <input type="text" id="reminder" />
+	                            
+	                            <div class="action">
+	                                <a class="button primary" id="activateButton"><span>Activate me &raquo;</span></a>
+	                            </div>
+                            </form>
+                            
+                            <div id="cannotActivate">
+                            	<div class="error on">
+                            		We are sorry, but it appears that the activation link you are using no longer exists.
+                            		Please ask your manager to issue a new activation link.
+                            	</div>
+                            </div>
+                        
+                        </div>
+                    </div>
+            </div></div>
+    </div>
+    <a href="/" class="footer">Rentfox Homepage</a>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var activate = new Activate('${c.activation_code}');
+        });
+    </script>
+    
+</body>
+</html>
+

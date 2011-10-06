@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+    <title>Rentfox | Sign in</title>
+	<%include file="externalfiles.html"/>
+</head>
+<body id="signinpage">
+    <div id="eventStatus">loading...</div>	
+    <div id="foxhelper">
+            <img src="/styles/img/foxhelper_shadow.png" class="thefox" />
+            <div class="foxpanel"><div class="panelwrap">
+                    <div class="display">
+                        <div class="wrap">
+                            
+                            <div class="default view on">
+                                % if c.error:
+                                <div class="error on">${c.error}</div>
+                                % endif
+                                <form method="post" action="${c.path}" id="signInForm">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" name="username" />
+                                    
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" />
+
+                                    
+                                    <div class="action">
+                                        <a class="button primary" id="signInButton"><span>Sign in to Rentfox &raquo;</span></a>
+                                    </div>
+                                </form>
+                                
+                                <div class="links">
+                                    <a class="link forgotEmail">Password recovery</a> | 
+                                    <a class="link signup" href="/#signup">Sign up</a>
+                                </div>
+                            </div>
+                            
+                            <div class="emailReminder view">
+                                <div class="error" id="emailError"></div>
+                                <label for="email">Enter your email</label>
+                                <input type="text" id="email" />
+                                <div class="action">
+                                    <a class="button primary" id="remindMe"><span>Let's figure this out!</span></a>
+                                </div>
+                                <div class="links">
+                                    <a class="link back">&laquo; Back to sign in page</a>
+                                </div>
+                            </div>
+                            
+                            <div class="hint view">
+                                <h2>Secret Reminder</h2>
+                                <div class="info hint" id="passwordSecret"></div>
+                                
+                                <div class="info email">
+                                    If the hint above didn't help, I also sent you
+                                    an email to with directions to reset your password. 
+                                    <em id="emailRecoveryDestination">weixiyen@gmail.com</em>
+                                </div>
+                            
+                                <div class="action">
+                                    <a class="button primary" id="signInAgain"><span>Back to sign in page &raquo;</span></a>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div></div>
+    </div>
+    <a href="/" class="footer">Rentfox Homepage</a>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            signin = new SignIn;
+        });
+    </script>
+    
+</body>
+</html>
+

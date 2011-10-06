@@ -1,0 +1,13 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+
+	<p>Deleting this floor plan will remove it from other units using this floorplan as well.</p>
+	<p>Are you sure you want to do this?</p>
+
+	<div class="action">
+		<a class="primary button" id="deleteFloorPlanButton"><span>Yes, delete floor plan</span></a>
+		<a class="button foxClose" id="deleteFloorPlanCancel"><span>Cancel</span></a>
+	</div>
+
+</div>

@@ -1,0 +1,78 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		tenant = new TenantView({tenantId: '${c.tenantId}'});
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="tenantView">
+	
+	<div class="personal"><div class="wrap">
+		<h3><span>Personal Details</span></h3>
+		<div class="display" id="tenantInfoDisplay">
+				
+			<div class="edit"><a class="mini button" id="editTenantInfo"><span><img src="/styles/img/ico/user_edit.png" />Edit tenant details</span></a></div>
+			
+			<p>
+				<span id="personalName"></span>
+				<span id="personalEmail"></span>
+				<span id="personalPhone"></span>
+				<span id="personalDOB"></span>
+				<span id="personalSSN"></span>
+			</p>
+			
+			<p>
+			% for unit in c.tenantResidences:
+			<a href="/unit/view/${unit['id']}" class="unit">${unit['label']}</a>
+			% endfor
+			</p>
+		</div>
+		<div class="editor" id="tenantInfoEditor"><div class="wrap">
+			<label for="tenantFname">First Name<input type="text" id="tenantFname" alt="e.g. Michael" /></label>
+			<label for="tenantLname">Last Name<input type="text" id="tenantLname" alt="e.g. Johnson" /></label>
+			<label for="tenantPhone">Phone<input type="text" id="tenantPhone" /></label>
+			<label for="tenantEmail">Email<input type="text" id="tenantEmail" /></label>
+			<label for="tenantDOB">D.O.B. <span>(MM/DD/YYYY)</span><input type="text" id="tenantDOB" /></label>
+			<label for="tenantSSN">Social Security Number<input type="text" id="tenantSSN" /></label>
+			<a class="primary button" id="saveTenantInfo"><span>Save Tenant</span></a><a class="button" id="cancelTenantInfo"><span>Cancel</span></a>
+		</div></div>
+	</div></div>
+	
+	<div class="emergency" id="emergencyContacts"><div class="wrap">
+		<h3><span>Emergency Contacts</span></h3>
+		<div class="display" id="contactButton">
+			<div class="edit"><a class="mini button" id="addContact"><span><img src="/styles/img/ico/add.png" />Add contact</span></a></div>
+		</div>
+		<div class="editor" id="contactEditor"><div class="wrap">
+			<label for="emergencyName">Name<input type="text" id="emergencyName" /></label>
+			<label for="emergencyPhone">Phone<input type="text" id="emergencyPhone" /></label>
+			<label for="emergencyRelationship">Relationship<input type="text" id="emergencyRelationship" alt="e.g. Friend" /></label>
+			<a class="primary button" id="saveContact"><span>Save Contact</span></a><a class="button" id="cancelContact"><span>Cancel</span></a>
+		</div></div>
+		<div id="contactList"></div>
+	</div></div>
+	
+	<div class="residences" id="previousResidences"><div class="wrap">
+		<h3><span>Previous Residences</span></h3>
+		<div class="display" id="residenceButton">
+			<div class="edit"><a class="mini button" id="addResidence"><span><img src="/styles/img/ico/add.png" />Add residence</span></a></div>
+		</div>
+		<div class="editor" id="residenceEditor"><div class="wrap">
+			<label for="residenceStart" class="half">Started<input type="text" id="residenceStart" class="datefield" /></label>
+			<label for="residenceEnd" class="half">Ended<input type="text" id="residenceEnd" class="datefield" /></label>
+			<label for="residenceStreet">Street<input type="text" id="residenceStreet" /></label>
+			<label for="residenceCity" class="long">City<input type="text" id="residenceCity" /></label>
+			<label for="residenceState" class="short">State<input type="text" class="zip" id="residenceState" maxlength="2" /></label>
+			<label for="residenceLandlord">Landlord<input type="text" id="residenceLandlord" /></label>
+			<label for="residenceLandlordPhone">Landlord phone<input type="text" id="residenceLandlordPhone" /></label>
+			<label for="residenceLandlordEmail">Landlord email<input type="text" id="residenceLandlordEmail" /></label>
+			<label for="residenceReasonLeaving">Reason for leaving<input type="text" id="residenceReasonLeaving" /></label>
+			<a class="primary button" id="saveResidence"><span>Save Residence</span></a><a class="button" id="cancelResidence"><span>Cancel</span></a>
+		</div></div>
+		<div id="residenceList"></div>
+	</div></div>
+	
+</div>
+
+<%inherit file="/base.html"/>

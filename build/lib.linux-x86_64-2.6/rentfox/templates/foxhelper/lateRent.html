@@ -1,0 +1,76 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+        <div class="rentDiv">
+	        <p>
+	            <label>Rent received on</label>
+	            <input type="text" id="rentReceivedDate" value="${c.rentReceivedDate}" />
+	        </p>
+	        <p class="important"><strong id="lateFee">$${c.totalFee}</strong> due in late fees</p>
+	        
+	        <p>
+	            <label class="checkbox"><input type="checkbox" checked="checked" value="1" id="remindTenant" /> Remind tenant to pay late fee.</label>
+	            <span id="willRemindText" class="description indented">
+	                We will email the residents of this unit to notify them of the late charge.
+	            </span>
+	        </p>
+        </div>
+        
+
+	<div class="action">
+		<a class="primary button" id="chargeLateFee"><span>Charge late fee</span></a>
+		<a class="button foxClose"><span>Cancel</span></a>
+	</div>
+
+</div>
+<script>
+var date = new Datepicker('#rentReceivedDate', 'days');
+
+$('#rentReceivedDate').bind('click', function() {
+	$('.datepickerDays a').bind('click', function() {
+		setTimeout(_calculateLate,100);
+	});
+});
+
+function _calculateLate() {
+	var newDate = $('#rentReceivedDate').val();
+	var newDate = newDate.split('/');
+	var m = newDate[0];
+	var d = newDate[1];
+	var y = newDate[2];
+	
+	var due = ${c.due}
+	var formonth = ${c.formonth}
+	var foryear = ${c.foryear}
+	var latefee = ${c.latefee}
+	var interval = ${c.interval}
+	
+	var payDate = new Date(y,m,d);
+	var dueDate = new Date(foryear,formonth,due);
+	var dayDiff = (payDate - dueDate)/86400000;
+	dayDiff = dayDiff - ${c.grace}
+	
+	if (dayDiff > 0) {
+		if (interval === 1) {
+			var newAmount = dayDiff * latefee;
+		} else {
+			var newAmount = latefee;
+		}
+	} else {
+		var newAmount = 0;
+	}
+	$('#lateFee').text('$'+newAmount.toFixed(2));
+}
+
+$('#lateFee').hover(function() {
+	$(this).css({'background':'#333','color':'#fff','cursor':'pointer'})
+}, function() {
+	$(this).css({'background':'#fff','color':'#D30000'})
+});
+
+$('#lateFee').bind('click', function() {
+	var amount = $('#lateFee').text().match(/\d+.\d+/);
+	
+	$('#lateFee').replaceWith('<input id="lateFee" type="text" size="5" value="'+amount+'" />');
+})
+</script>

@@ -1,0 +1,84 @@
+/* =layout
+----------------------------------------------- */
+#search {
+	overflow: auto;
+	}
+
+/* =results
+----------------------------------------------- */
+#search > .results {
+	float: left;
+	width: 600px;
+	margin: -15px 0 0 5px;
+	overflow: hidden;
+	}
+#search > .results > .display {
+	padding: 15px 30px 0 15px;
+	background: #fff;
+	overflow: hidden;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	}
+#search > .results > .display a {
+	font: 16px Verdana;
+	color: blue;
+	}
+#search > .results > .display h5 {
+	font: 16px Verdana;
+	}
+#search > .results > .display p {
+	font: 13px Verdana;
+	line-height: 1.5em;
+	padding: 3px 0 15px 0;
+	margin-bottom: 15px;
+	border-bottom: 1px dotted #ccc;
+	}
+#search > .results > .display .nothing {
+	margin: 30px 0 40px 0;
+	font: 16px Verdana;
+	text-align: center;
+	}
+
+/* =filters
+----------------------------------------------- */
+#search > .filters {
+	position: fixed;
+	margin: -15px 0 0 605px;
+	padding: 10px 0 15px 15px;
+	border-left: 1px solid #ccc;
+	}
+#search > .filters > .section {
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	padding: 0 0 15px 0;
+	margin: 0 0 15px 0;
+	width: 320px;
+	}
+#search > .filters > .section.last {
+	overflow: hidden;
+	border-bottom: none;
+	padding: 0;
+	margin: 0;
+	width: 320px;
+	}
+#search > .filters > .section > a {
+	color: blue;
+	display: block;
+	float: left;
+	clear: both;
+	margin: 0 0 3px 0;
+	font: 15px Verdana;
+	text-decoration: underline;
+	cursor: pointer;
+	}
+#search > .filters > .section > a.on {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: default;
+	}
+#search > .filters > .section input.searchbox {
+	width: 310px;
+	font: 20px Georgia;
+	}

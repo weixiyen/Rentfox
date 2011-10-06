@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rentfox/!svn/ver/428/rentfox/rentfox/templates/foxhelper
+END
+signup.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rentfox/!svn/ver/410/rentfox/rentfox/templates/foxhelper/signup.html
+END
+renameType.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rentfox/!svn/ver/290/rentfox/rentfox/templates/foxhelper/renameType.html
+END
+deleteUser.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rentfox/!svn/ver/279/rentfox/rentfox/templates/foxhelper/deleteUser.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rentfox/!svn/ver/353/rentfox/rentfox/templates/foxhelper/index.html
+END
+switchSuperuser.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rentfox/!svn/ver/275/rentfox/rentfox/templates/foxhelper/switchSuperuser.html
+END
+deleteCompany.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rentfox/!svn/ver/279/rentfox/rentfox/templates/foxhelper/deleteCompany.html
+END
+resetPassword.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rentfox/!svn/ver/428/rentfox/rentfox/templates/foxhelper/resetPassword.html
+END
+ajaxerror.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rentfox/!svn/ver/282/rentfox/rentfox/templates/foxhelper/ajaxerror.html
+END
+message.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rentfox/!svn/ver/181/rentfox/rentfox/templates/foxhelper/message.html
+END
+updateRent.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rentfox/!svn/ver/415/rentfox/rentfox/templates/foxhelper/updateRent.html
+END
+default.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rentfox/!svn/ver/427/rentfox/rentfox/templates/foxhelper/default.html
+END
+confirm.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rentfox/!svn/ver/181/rentfox/rentfox/templates/foxhelper/confirm.html
+END
+lateRent.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rentfox/!svn/ver/415/rentfox/rentfox/templates/foxhelper/lateRent.html
+END
+endLease.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rentfox/!svn/ver/338/rentfox/rentfox/templates/foxhelper/endLease.html
+END
+unitContact.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rentfox/!svn/ver/303/rentfox/rentfox/templates/foxhelper/unitContact.html
+END

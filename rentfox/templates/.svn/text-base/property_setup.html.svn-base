@@ -1,0 +1,216 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+        % if (c.curPropId):
+		property = new PropertySetup({propertyId:'${c.curPropId}',unitId:'${c.unitId}'});
+        % else:
+        property = new PropertySetup;
+        % endif
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="propertySetup">
+
+	<div class="editMode">
+		<a class="mini button" href="/property/view/${c.curPropId}" id="property-preview"><span><img src="/styles/img/ico/building.png" />View Property</span></a>
+		<h1 id="edit-mode-text">You are in <strong>"property setup mode"</strong></h1>
+	</div>
+	
+	<div class="leftColumn">
+		
+		<!-- Property Info -->
+		<div class="propertyInfo pane" id="propertyInfo">
+			
+			<!-- edit -->
+			<div class="edit pane" id="propertyInfoEdit">
+				<div id="saveProperty" class="save">
+					<div class="inputs">
+						<label for="propertyName">Property Name<input type="text" name="name" id="propertyName" /></label>
+						<label for="propertyStreet">Street<input type="text" name="street" id="propertyStreet" /></label>
+						<label for="propertyCity">City<input type="text" name="city" id="propertyCity" /></label>
+						<label for="propertyState" class="state">State<input type="text" name="state" id="propertyState" maxlength="2" /></label>
+						<label for="propertyZip" class="zip">Zip<input type="text" name="zip" id="propertyZip" maxlength="10" /></label>
+						<label for="propertyType" class="clear">
+							<select id="propertyType">
+								<option value="single">Single unit</option>
+								<option value="multi">Multi unit</option>
+							</select>
+						</label>
+					</div>
+					<div class="uploadPlaceHolder" id="propertyPhotoEdit"><span id="uploadPropertyPhoto"></span><img src="" /></div>
+					<div class="action">
+						<a class="primary button" id="savePropertyButton"><span>Create Property</span></a>
+						<a class="button fixedLength" id="savePropertyCancel"><span>Cancel</span></a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- display -->
+			<div class="display pane" id="propertyInfoDisplay">
+				<div class="pic"><div class="thumb"><span class="frame"><img id="propertyPhotoDisplay" /></span></div></div>
+				<div class="info">
+					<h3 id="propertyNameLabel"></h3>
+					<p><span id="propertyStreetLabel"></span><br /><span id="propertyCityLabel"></span>, <span id="propertyStateLabel"></span>, <span id="propertyZipLabel"></span></p>
+					<div class="action">
+						<a id="editPropertyButton" class="mini button"><span><img src="/styles/img/ico/building_edit.png" />Edit</span></a>
+						<a id="deletePropertyLink" class="mini button"><span><img src="/styles/img/ico/delete.png" />Delete</span></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- Unit Maker -->
+		<div class="unitMaker pane" id="unitMaker">
+			
+			<div class="input"><input type="text" alt="unit #s" id="unitsInput" /></div>
+			<div class="action">
+				<a class="button" id="unitMakerButton"><span>Add unit numbers</span></a>
+			</div>
+			<ul class="tips" id="unitMakerShortcuts">
+				<div class="tooltipArrow"></div>
+				<li class="header">Example Commands (samples)</li>
+				<li><label>5, 15, 25</label>- adds units 5, 15 and 25</li>
+				<li><label>101-150</label>- adds units from 101-150</li>
+				<li><label>x 5, 15, 25</label>- deletes unit 5, 15, and 25</li>
+				<li><label>x 101-150</label>- deletes units from 101-150</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="rightColumn">
+	
+		
+		<!-- vertical unit list -->
+		<div class="unit tooltip" id="unitTooltip">
+			<div class="arrow"></div>
+			<h5>Click on a Unit</h5>
+			<p>You can click units to edit floorplans and upload unit photos.</p>
+		</div>
+		<div class="unitList pane" id="unitList">
+			<!-- unit scroller (re-usable) -->
+			<div class="unitScroller" id="unitScroller">
+				<div class="label">Unit #</div>
+				<div class="manualInput">
+					<input type="text" alt="filter" />
+				</div>
+				<div class="scrollFrame" id="scrollFrame"><ul></ul></div>
+				<div class="controls">
+					<div class="slider"></div>
+				</div>
+			</div>
+			<!-- end unit scroller -->
+
+		</div>
+		<!-- unit info -->
+		<div class="unitInfo pane" id="unitInfo">
+			<div class="progress" id="progress">
+				<div class="exitSetup" id="exitSetup">
+					<a class="primary button" id="exitSetupButton"><span>Exit Setup</span></a>
+				</div>
+				<div class="bar"><span></span></div>
+				<label></label>
+			</div>
+			
+			<div class="unitbox" id="unitbox"><div class="wrap"><div class="wrap">
+				
+				
+				<div class="edit" id="editFloorPlan">
+					<h1 id="unitEditorLabel">Unit 101</h1>
+					<div id="saveFloorPlan" class="save">
+						<div class="inputs">
+							<label for="floorPlanName">Floor Plan Name<input type="text" name="name" id="floorPlanName" alt="e.g. Fanciful" /></label>
+							<div class="row">
+								<label for="sqft">Sqft<input type="text" name="sqft" id="sqft" /></label>
+								<label for="beds">Br<input type="text" name="beds" id="beds" alt="e.g 2" /></label>
+								<label for="baths">Ba<input type="text" name="baths" id="baths" alt="e.g. 2.5" /></label>
+							</div>
+							<label for="floorPlanDescription">Floorplan Promotional Copy
+							<em>Information here will be re-used in other places, such as advertising your unit on Craigslist.</em>
+							<textarea name="description" cols="35" rows="5" id="floorPlanDescription"></textarea></label>
+						</div>
+						<div class="action">
+							<a class="primary button fixedLength" id="saveFloorPlanButton"><span>Save</span></a>
+							<a class="button fixedLength" id="saveFloorPlanCancel"><span>Cancel</span></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="display" id="displayFloorPlan">
+					
+					<div class="unitedit">
+						<div class="moremenu"><div class="wrap">
+							<label></label>
+							<div class="options">
+								<ul>
+									<li id="editFloorPlanLink">Edit floor plan</li>
+									<li id="renameUnitLink">Rename unit</li>
+									<li id="deleteUnitLink">Delete unit</li>
+								</ul>
+							</div>
+						</div></div>
+					</div>
+					
+					<h1 id="unitLabel"></h1>
+					<div class="unitLabelInput" id="unitLabelRenamer">
+						<input type="text" id="unitLabelInput" />
+						<a class="button primary" id="unitRenameButton"><span>Save</span></a>
+						<a class="button" id="unitRenameCancel"><span>Cancel</span></a>
+					</div>
+					
+					<div class="filter">
+						<div class="options"><div class="wrap"><ul id="floorPlanList"></ul></div></div>
+						<div><label class="floorPlanLabel" id="floorPlanLabel"></label></div>
+					</div>
+					
+					<div class="floorPlanInfo" id="floorPlanInfo">
+						<div class="uploadPlaceHolder" id="floorPlanDisplayPhoto"><span id="uploadFloorPlanOnDisplay"></span><img src="" /></div>
+						<div class="floorplan" id="floorPlan"></div>
+					</div>
+					
+					
+					
+					<div class="picViewer" id="unitPicViewer">
+						<h3 id="unitPhotosLabel"></h3>
+						<em>Photos here will be re-used in other places, such as advertising your unit on Craigslist.</em>
+						<div class="droptext">Drop photos here!</div>
+						<div class="picDisplay"><span class="frame"></span></div>
+						<div class="picBar">
+							<div class="picEditor">
+								<div class="picOptions">
+									<ul>
+										<li class="add" id="unitPicViewer-upload">Upload more</li>
+										<li class="delete" id="unitPicViewer-delete">Delete this</li>
+									</ul>
+								</div>
+							</div>
+							<div class="picNav">
+								<div class="left"><span>Previous</span></div>
+								<div class="center">0 of 0</div>
+								<div class="right"><span>Next</span></div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div></div></div>
+			
+			
+		</div>
+		
+		
+	</div>
+
+</div>
+
+<div id="previewModal">
+	<div class="close">Close Window</div>
+	<img />
+</div>
+
+<%inherit file="/base.html"/>
+
+
+

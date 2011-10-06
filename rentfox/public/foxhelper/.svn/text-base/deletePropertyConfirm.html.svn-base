@@ -1,0 +1,13 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+
+	<p>Deleting a property will disable all related property data such as units and leases for this property.</p>
+	<p>Are you sure you want to delete this property?</p>
+
+	<div class="action">
+		<a class="primary button" id="deletePropertyButton"><span>Yes, delete property</span></a>
+		<a class="button foxClose" id="deletePropertyCancel"><span>Cancel</span></a>
+	</div>
+
+</div>

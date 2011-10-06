@@ -1,0 +1,14 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+
+	<h2>${c.alert['title']}</h2>
+    <p>${c.alert['message']}</p>
+    % if 'button' in c.alert:
+	<div class="action">
+		<a class="primary button" href="${c.alert['link']}"><span>${c.alert['button']}</span></a>
+		<a class="button foxClose"><span>Cancel</span></a>
+	</div>
+	% endif
+
+</div>

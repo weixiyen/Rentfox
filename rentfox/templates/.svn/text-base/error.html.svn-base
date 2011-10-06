@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+    <title>404 File not found</title>
+	<%include file="externalfiles.html"/>
+</head>
+<body id="signinpage">
+    <div id="foxhelper">
+            <img src="/styles/img/foxhelper_shadow.png" class="thefox" />
+            <div class="foxpanel"><div class="panelwrap">
+                    <div class="display">
+                        <div class="wrap">
+                        
+                           <h3>Oops!</h3>
+                           
+                           <p>We are very sorry, but we can't find or render the page you are looking for.</p>
+                           
+                           <p>It is possible that you mistyped a link or you were signed out for security reasons.<br /><br /></p>
+                           
+                           <h5>Bug Report</h5>
+                           
+                           <p>If you believe this to be a bug, please email us at <a href="mailto:support@rentfox.net">support@rentfox.net</a> <br /> <br /></p>
+                           
+	                        <div class="action">
+	                            <a class="button primary" href="/"><span>Go to Dashboard &raquo;</span></a>
+	                            <a class="button" href="javascript:history.go(-1)"><span>Go Back</span></a>
+	                        </div>
+	                        
+	                         <div class="links">
+                                Still having trouble? <a class="link" href="/signout">Force Sign In &raquo;</a>
+                            </div>
+                         
+                        </div>
+                    </div>
+            </div></div>
+    </div>
+    <a href="/" class="footer">Rentfox Homepage</a>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+	
+	<div class="propertyList">
+		<ul id="removePropertyList"></ul>
+	</div>
+	<div class="action">
+		<a class="primary button" id="removePropertiesButton"><span>Remove access</span></a>
+		<a class="button foxClose" id="removePropertiesCancel"><span>Cancel</span></a>
+	</div>
+
+</div>

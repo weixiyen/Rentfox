@@ -1,0 +1,75 @@
+<%inherit file="/base.html"/>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		property = new PropertyView({propertyId:'${c.curPropId}'});
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="propertyView">
+	
+	<div class="content">
+		<div class="body">
+			<div class="info">
+				<div class="header">
+					<div class="miniProp">
+						<div class="pic"><div class="thumb"><span class="frame"><img src="${c.property.photo}" /></span></div></div>
+						<div class="info">
+							<h3>${c.property.name}</h3>
+							<p>${c.property.address}<br />${c.property.city}, ${c.property.state}, ${c.property.zip}<br />
+								<a href="/property/setup/${c.property.id}" class="mini button"><span><img src="/styles/img/ico/building_edit.png" />Property Setup</span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="stats">
+					<div class="progressbox" id="rent-progress">
+						<h3>${c.currentMonth} rent tracker</h3>
+						<div class="bar"><span style="width:${c.rentPercent}"></span></div>
+						<label>${c.rentPercent} paid (${c.rentPaid}/${c.rentDue}).</label>
+					</div>
+					
+					<div id="monthly-occupancy-chart" class="chart">
+					</div>
+				</div>
+			</div>
+			
+			<div class="pulse" id="property-pulse"><div class="wrap">
+				<div class="filterList">
+		
+					<label id="property-pulse-label">Everything</label>
+					<div class="options">
+						<ul id="property-pulse-options">
+							<li class="on" rel="all">Everything</li>
+							<li rel="lease">Lease</li>
+							<li rel="rent">Rent</li>
+							<li rel="warning">Warnings</li>
+							<li rel="transaction">Transactions</li>
+							<li rel="message">Messages</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container"></div>
+			</div></div>
+			
+		</div>
+	
+	</div>
+	
+	<div class="unitnav">
+		<!-- unit scroller (re-usable) -->
+		<div class="unitScroller" id="unitScroller">
+			<div class="label">Unit #</div>
+			<div class="manualInput">
+				<input type="text" alt="filter" />
+			</div>
+			<div class="scrollFrame" id="scrollFrame"><ul></ul></div>
+			<div class="controls">
+				<div class="slider"></div>
+			</div>
+		</div>
+		<!-- end unit scroller -->
+	</div>
+</div>

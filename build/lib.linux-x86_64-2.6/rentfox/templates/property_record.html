@@ -1,0 +1,55 @@
+<%inherit file="/base.html"/>
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		record = new PropertyRecord;
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="propertyRecord">
+	<div class="unitTable">
+		<table>
+			<thead>
+				<tr>
+					<th class="date"><span>
+						<select id="dateDropDown">
+						</select>
+					</span></th>
+					<th class="property"><span>
+						<select id="propertyDropDown">
+						</select>
+					</span></th>
+					<th class="unit on"><span><input type="text" id="unit" alt="Unit" /></span></th>
+					<th class="rent"><span>Rent</span></th>
+					<th class="due"><span>Due</span></th>
+					<th class="status"><span>
+						<div class="pagination">
+							<a class="first control disabled"></a>
+							<a class="prev control disabled"></a>
+							<a class="pages"></a>
+							<a class="next control disabled"></a>
+							<a class="last control disabled"></a>
+						</div>
+						<select id="statusDropDown">
+							<option value="all">Filter status</option>
+							<option value="paid">Rent Received</option>
+							<option value="latefee">Late fee owed</option>
+							<option value="overdue">Overdue</option>
+						</select>
+					</span></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+% if c.foxAlert != False:
+<script type="text/javascript">
+	$(function(){
+		page.fox.center().display();
+	});
+</script>
+% endif

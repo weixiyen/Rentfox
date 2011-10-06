@@ -1,0 +1,6 @@
+recursive-include rentfox/public *
+recursive-include rentfox/templates *
+recursive-include rentfox/model *
+recursive-include rentfox/controllers *
+recursive-include rentfox/config *
+recursive-include rentfox/lib *

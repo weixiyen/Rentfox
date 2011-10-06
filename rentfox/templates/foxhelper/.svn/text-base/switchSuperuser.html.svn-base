@@ -1,0 +1,16 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+        
+        <p>
+        	<label>Choose new superuser</label>
+            <select id="userlist"></select>
+        </p>
+        
+
+	<div class="action">
+		<a class="primary button" id="switchSuperuserButton"><span>Switch Superuser</span></a>
+		<a class="button foxClose"><span>Cancel</span></a>
+	</div>
+
+</div>

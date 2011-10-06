@@ -1,0 +1,73 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		% if c.is_superuser:
+		company = new CompanyManage
+		% endif
+	});
+</script>
+<div class="page" id="companyManage">
+	<div class="left"><div class="wrap">
+		<div class="row">
+			<label>Company</label>
+			<div class="item"><span id="editName">${c.name}</span></div>
+		</div>
+		<div class="row">
+			<label>Street</label>
+			<div class="item"><span id="editStreet">${c.street}</span></div>
+		</div>
+		<div class="row">
+			<label>City, state, zip</label>
+			<div class="item"><span id="editLocation">${c.location}</span></div>
+		</div>
+		<div class="row">
+			<label>Phone</label>
+			<div class="item"><span id="editPhone">${c.phone}</span></div>
+		</div>
+		<div class="row">
+			<label>Email</label>
+			<div class="item"><span id="editEmail">${c.email}</span></div>
+		</div>
+		<div class="row">
+			<label>Account Owner</label>
+			<div class="item">${c.superuser}</div>
+		</div>
+		% if c.is_superuser:
+		<div class="row">
+			<label>&nbsp;</label>
+			<div class="item"><a id="switchSuperuser" class="link">Give Account Owner to someone else</a></div>
+		</div>
+		<div class="row last">
+			<label>Delete</label>
+			<div class="item"><a id="deleteAccount" class="deleteAccount">Delete Company</a></div>
+		</div>
+		% endif
+		
+	</div></div>
+	<div class="right">
+		<div class="sect">
+			<h3 id="company-name">${c.name}</h3>
+			<p>
+				Owner of ${len(c.properties)} ${c.propertyLabel}<br />
+				Owner of ${c.totalUnits} units<br />
+				Currently ${c.totalTenants} tenants<br />
+				${c.occupancy} occupancy rate<br />
+				Created on ${c.companyCreated}
+			</p>
+		</div>
+		<div class="sect last">
+			% if len(c.properties):
+				<p>Portfolio contains ${len(c.properties)} ${c.propertyLabel}:</p>
+				<p>
+					% for property in c.properties:
+						${property['name']}<br />
+					% endfor
+				</p>
+			% else:
+				<p>Portfolio contains no properties yet.</p>
+			% endif
+			
+		</div>
+	</div>
+</div>
+<%inherit file="/base.html"/>

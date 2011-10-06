@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+    <title>${c.page_title} - ${request.environ.get('COMPANY_NAME')}</title>
+	<%include file="externalfiles.html"/>
+</head>
+<body>
+<div id="header">
+	<form class="search" method="GET" action="/search">
+		<div class="box"><input class="searchbox" type="text" name="q" alt="Search anything..." /></div>
+		<div class="find"><button><span>Search</span></button></div>
+	</form>
+	<ul class="me">
+		<li class="${c.menuDashboard}"><a href="/dashboard">Dashboard</a></li>
+		<li class="${c.menuCompany}"><a href="/company">Company</a></li>
+		<li class="${c.menuAccount}"><a href="/account">Account</a></li>
+		<li class="${c.menuUsers}"><a href="/users">Users</a></li>
+		<li class="${c.menuHelp}"><a href="/help">Help</a></li>
+		<li><a href="/signout">Sign Out</a></li>
+	</ul>
+</div>
+
+<div id="eventStatus">loading...</div>
+
+${self.body()}
+
+<div id="menu">
+
+	<div id="foxhelper">
+		<div class="balloon">Yo</div>
+		<img src="/styles/img/foxhelper_shadow.png" class="thefox" />
+		<div class="foxpanel"><div class="panelwrap">
+			<div class="display"></div>
+		</div></div>
+	</div>
+
+	<div id="logo"><a href="/dashboard"><span>Rentfox</span></a></div>	
+	
+	% if c.menuSubmenu:
+	<div class="sub">
+		<div class="options" id="propertyOptions"><a href="#"><span>Options</span></a>
+			<div class="optionlist" id="propertyOptionsList">
+				<div class="list">
+					<ul>
+						<li class="edit"><a href="/property/setup/${c.curPropId}">Property Setup</a></li>
+					</ul>
+				</div>
+				<div class="trunk"></div>
+			</div>
+		</div>
+		<ul>
+			<li class="${c.submenuStaff}"><a href="/users/${c.curPropId}">Staff</a></li>
+			<li class="${c.submenuProperty}"><a href="/property/view/${c.curPropId}">${c.curPropName}</a></li>
+		</ul>
+	</div>
+	% endif
+	
+	<div class="main">
+		<ul>
+			<li class="record ${c.menuRecord}"><a href="/property/record">Record Rent</a></li>
+			<li class="properties ${c.menuProperty}"><a id="menuProperties"><span>Properties</span></a>
+				<div class="menulist" id="menuPropertiesList">
+					<div class="list">
+						<div class="create"><a href="/property/setup" class="mini button"><span><img src="/styles/img/ico/building_add.png" />Create Property</span></a></div>
+						<div class="wrap">
+							<ul>
+							% for property in request.environ.get('PROPERTY_LIST'):
+								<li><a href="/property/view/${property['id']}">${property['name']}</a></li>
+							% endfor
+							</ul>
+						</div>
+					</div>
+					<div class="trunk"></div>
+				</div>
+			</li>
+			<li class="units ${c.menuUnits}"><a href="/property/units">Units</a></li>
+			<li class="reports ${c.menuReports}"><a href="/reports">Ledger</a></li>
+			<li class="contacts ${c.menuContacts}"><a href="/contacts">Contacts</a></li>
+		</ul>
+	</div>
+	
+	% if c.menuSubmenu:
+	<div class="submenu backdrop" id="menuBackdrop"></div>
+	% else:
+	<div class="backdrop" id="menuBackdrop"></div>
+	% endif
+
+</div>
+
+% if c.foxAlert != False:
+<script type="text/javascript">
+	$(function(){
+		page.fox.showAlert();
+	});
+</script>
+% endif
+
+<script type="text/javascript">
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2806397-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+
+<script type="text/javascript">
+  var uservoiceOptions = {
+    key: 'rentfox',
+    host: 'rentfox.uservoice.com', 
+    forum: '24116',
+    lang: 'en',
+    showTab: false
+  };
+  function _loadUserVoice() {
+    var s = document.createElement('script');
+    s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js";
+    document.getElementsByTagName('head')[0].appendChild(s);
+  }
+  _loadSuper = window.onload;
+  window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+</script>
+
+</body>
+</html>

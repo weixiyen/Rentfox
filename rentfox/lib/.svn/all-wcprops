@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/rentfox/!svn/ver/419/rentfox/rentfox/lib
+END
+helpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rentfox/!svn/ver/347/rentfox/rentfox/lib/helpers.py
+END
+app_globals.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rentfox/!svn/ver/314/rentfox/rentfox/lib/app_globals.py
+END
+cache.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rentfox/!svn/ver/355/rentfox/rentfox/lib/cache.py
+END
+base.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rentfox/!svn/ver/347/rentfox/rentfox/lib/base.py
+END
+usps.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rentfox/!svn/ver/104/rentfox/rentfox/lib/usps.py
+END
+types_uuid.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rentfox/!svn/ver/314/rentfox/rentfox/lib/types_uuid.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rentfox/!svn/ver/23/rentfox/rentfox/lib/__init__.py
+END
+date.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rentfox/!svn/ver/411/rentfox/rentfox/lib/date.py
+END
+valid.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rentfox/!svn/ver/419/rentfox/rentfox/lib/valid.py
+END
+email.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rentfox/!svn/ver/361/rentfox/rentfox/lib/email.py
+END
+image.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rentfox/!svn/ver/328/rentfox/rentfox/lib/image.py
+END
+storage.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rentfox/!svn/ver/360/rentfox/rentfox/lib/storage.py
+END
+auth.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rentfox/!svn/ver/314/rentfox/rentfox/lib/auth.py
+END
+search.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rentfox/!svn/ver/392/rentfox/rentfox/lib/search.py
+END

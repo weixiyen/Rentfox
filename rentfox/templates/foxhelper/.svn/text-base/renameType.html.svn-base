@@ -1,0 +1,16 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+        
+        <p>
+        	<label>Enter new name for category</label>
+            <input type="text" id="newName" />
+        </p>
+        
+
+	<div class="action">
+		<a class="primary button" id="renameTypeButton"><span>Rename Category</span></a>
+		<a class="button foxClose"><span>Cancel</span></a>
+	</div>
+
+</div>

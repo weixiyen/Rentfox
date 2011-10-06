@@ -1,0 +1,181 @@
+<%inherit file="/base.html"/>
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		record = new ReportsTransactions;
+		$('#expensePay').searchsuggest('all');
+		$('#incomeFrom').searchsuggest('all');
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="reportsTransactions">
+	<div class="sidepanel" id="sidepanel"><div class="wrap"><div class="wrap">
+	
+		<div class="panel default on" id="defaultPanel">
+			<div class="unitTable section">
+				<div class="pagination left">
+					<a class="first control disabled"></a>
+					<a class="prev control disabled"></a>
+					<a class="pages"></a>
+					<a class="next control disabled"></a>
+					<a class="last control disabled"></a>
+				</div>
+			</div>
+			<div class="insert section">
+				<a class="mini button" id="addTransaction"><span><img src="/styles/img/ico/money.png" />Add a Transaction</span></a>
+			</div>
+			<div class="filter">
+				<select class="properties" id="propertyDropDown">
+				</select>
+				<ul id="period">
+					<li><a id="all" class="on">Everything</a></li>
+					<li><a id="thisMonth">This Month</a></li>
+					<li><a id="lastMonth">Last Month</a></li>
+					<li><a id="lastQuarter">Last Quarter</a></li>
+					<li><a id="thisYear">This Year</a></li>
+					<li><a id="lastYear">Last Year</a></li>
+					
+				</ul>
+				<table>
+					<tr>
+						<td>Income</td>
+						<td id="incomeCell"></td>
+					</tr>
+					<tr>
+						<td>Expense</td>
+						<td id="expenseCell"></td>
+					</tr>
+					<tr>
+						<td>Total</td>
+						<td id="totalCell"></td>
+					</tr>
+				</table>
+				<!--
+				<div class="export">
+					<a class="mini button" id="exportExcel"><span><img src="/styles/img/ico/excel.png" />.xls</span></a>
+					<a class="mini button" id="exportPDF"><span><img src="/styles/img/ico/pdf.png" />.pdf</span></a>
+				</div>
+				-->
+			</div>
+		</div>
+		
+		<div class="panel editTransaction" id="editTransactionPanel">
+			<div id="addExpenseTabs">
+				<a class="cancel close">cancel</a>
+				<ul class="tabs">
+					<li class="on" id="editExpenseTab">Expense</li>
+					<li id="editIncomeTab">Income</li>
+				</ul>
+			</div>
+			<div id="editExpense" class="form on">
+				<div class="field">
+					<select id="expenseType">
+						<option>Choose expense type</option>
+						<option>Advertising</option>
+						<option>Auto &amp; Travel</option>
+						<option>Capital Improvements</option>
+						<option>Cleaning / Maintenance</option>
+						<option>Commissions</option>
+						<option>Deposit Return</option>
+						<option>Depreciation / Depletion</option>
+						<option>Insurance</option>
+						<option>Legal / Professional Fees</option>
+						<option>Management Fees</option>
+						<option>Mortgage Interest</option>
+						<option>Mortgage Principal</option>
+						<option>Other</option>
+						<option>Other Interest</option>
+						<option>Refund</option>
+						<option>Repairs</option>
+						<option>Supplies</option>
+						<option>Taxes</option>
+						<option>Utilities</option>
+					</select>
+				</div>
+				<div class="field">
+					<label>Pay to</label>
+					<input type="text" id="expensePay" />
+				</div>
+				<div class="field">
+					<label>Amount</label>
+					<input type="text" class="short" id="expenseAmount" />
+				</div>
+				<div class="field">
+					<label>Date</label>
+					<input type="text" class="datefield" id="expenseDate" />
+				</div>
+				<a class="primary button" id="saveExpense"><span>&laquo; Save Expense</span></a>
+				<a class="close button"><span>Cancel</span></a>
+				<a class="delete">Delete</a>
+			</div>
+			<div id="editIncome" class="form">
+				<div class="field">
+					<select id="incomeType">
+						<option>Choose income type</option>
+						<option>Rent</option>
+						<option>Fee</option>
+						<option>Deposit</option>
+						<option>Other Income</option>
+					</select>
+				</div>
+				<div id="record-non-rent" class="income-record-view">
+					<div class="field">
+						<label>From who</label>
+						<input type="text" id="incomeFrom" />
+					</div>
+					<div class="field">
+						<label>Amount</label>
+						<input type="text" class="short" id="incomeAmount" />
+					</div>
+					<div class="field">
+						<label>Date</label>
+						<input type="text" class="datefield" id="incomeDate" />
+					</div>
+					<a class="primary button" id="saveIncome"><span>&laquo; Save Income</span></a>
+					<a class="close button"><span>Cancel</span></a>
+					<a class="delete">Delete</a>
+				</div>
+				<div id="record-rent"  class="hidden income-record-view">
+					<p class="notice">
+						Please use our <a href="/property/record">Record Rent</a> feature.
+					</p>
+					<p class="info">
+						We designed the record page specifically for recording rent quickly and easily.
+						Thie rent record feature works with in conjunction your leases. We hope you like it!
+					</p>
+				</div>
+			</div>
+		</div>
+		
+	</div></div></div>
+	<div class="transactionList" id="transactionList">
+		<div class="unitTable">
+			<table>
+				<thead>
+					<tr>
+						<th class="date"><span>
+							<select id="dateDropDown">
+							</select>
+						</span></th>
+						<th class="type"><span>
+							<select id="typeDropDown">
+							</select>
+						</span></th>
+						<th class="who"><span><input type="text" id="who" alt="Search transactions..." /></span></th>
+						<th class="amount"><span>
+							<select id="filterDropDown">
+							</select>
+						</span></th>
+						<th class="balance on text"><span>Balance</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+</div>
+

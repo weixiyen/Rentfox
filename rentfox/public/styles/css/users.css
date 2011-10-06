@@ -1,0 +1,233 @@
+/* =layout
+----------------------------------------------- */
+#users {
+    overflow: auto;
+    }
+#users > div {
+    margin: 10px 0 0 0;    
+    }
+#users > .left {
+    float: left;
+    width: 180px;
+    }
+#users > .middle {
+    float: left;
+    width: 520px;
+    overflow: hidden;
+    }
+#users > .right {
+    position: fixed;
+    margin-left: 700px;
+    overflow: hidden;
+    width: 240px;
+    }
+
+/* =left display
+----------------------------------------------- */
+#users > .left .button {
+    margin-left: 10px;
+    }
+    
+/* =middle display
+----------------------------------------------- */
+#users > .middle .userbox {
+    padding: 0 0 4px 0;
+    background: no-repeat url("../img/unit_display_bottom.png") center bottom;
+    }
+#users > .middle .userbox > .wrap {
+    padding: 4px 0 0 0;
+    background: no-repeat url("../img/unit_display_top.png");
+    }
+#users > .middle .userbox > .wrap > .wrap {
+    background: #fff;
+    width: 478px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    }
+#users > .middle .userbox > .wrap > .wrap > div {
+    padding: 20px;
+    }
+#users > .middle .userbox > .wrap > .wrap > div > a.close {
+    display: block;
+    float: right;
+    height: 16px;
+    width: 16px;
+    background: no-repeat url("../img/ico/x.png");
+    cursor: pointer;
+    }
+#users > .middle .userbox > .wrap > .wrap > div > a.close > span {
+    display: none;
+    }
+#users > .middle > .userbox {
+    display: none;
+    float: left;
+    }
+    
+/* =middle display boxes
+----------------------------------------------- */
+#users .userbox h3 {
+    font: bold 14px Verdana;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ccc;
+    }
+
+/* =middle display boxes
+----------------------------------------------- */
+#users .userForm {
+    overflow: hidden;    
+    }
+#users .userForm .row {
+    overflow: auto;
+    font-size: 12px;
+    margin-bottom: 15px;    
+    }
+#users .userForm .left {
+    float: left;
+    width: 30%;
+    font-weight: bold;
+    }
+#users .userForm .right {
+    float: left;
+    width: 70%;
+    overflow: hidden;
+    }
+#users .userForm .right span {
+    font-size: 10px;
+    color: #666;
+    margin: 0 10px 0 10px;
+    }
+#users .userForm .right div {
+    font-size: 10px;
+    color: #666;
+    margin: 5px 0 0 0;
+    }
+#users .userForm .right .indented {
+    margin-left: 25px;
+    }
+#users .userForm .row.break {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    }
+#users .userForm .row .button.cancel {
+    float: right;
+    }
+
+/* =middle display boxes
+----------------------------------------------- */
+#users .display .useredit {
+    float: right;
+    margin: 0 8px 0 0;
+    }
+#users .display .profile {
+    overflow: hidden;  
+    }
+#users .display .profile .thumb {
+    float: left;    
+    }
+#users .display .profile dl {
+    float: left;
+    margin: 3px 0 0 20px;
+    }
+#users .display .profile dt {
+    font-weight: bold;  
+    }
+#users .display .profile dd {
+    margin-top: 5px;
+    }
+#users .display .info {
+    clear: both;
+    border-top: 1px solid #ccc;
+    margin: 30px 0 0 0;
+    padding: 10px 0 0 0;
+    overflow: hidden;
+    line-height: 1.7em;
+    }
+#users .display .label {
+    float: left;
+    width: 70px;
+    font-weight: bold;
+    }
+#users .display .content {
+    float: left;
+    margin-left: 20px;
+    }
+#users .display .content li {
+    padding: 0 0 2px 0;
+    }
+#users .display .activation {
+	background: #fff9d0;
+	padding: 10px;
+	overflow: hidden;
+	margin: 30px 0 0 0;
+	}
+#users .display .activation p {
+	padding-bottom: 15px;
+	}
+#users .display .activation .display-email {
+	font-weight: bold;
+	}
+#users .display .activation .important {
+	color: red;
+	display: block;
+	padding-bottom: 20px;
+	font: bold 15px Verdana;
+	}
+#users .display .activation .link{
+	width: 417px;
+	margin: 0;
+	border: 0;
+	background: #fff;
+	border: 1px solid #ccc;
+	}
+#users .display .activation .action{
+	padding: 10px;
+	margin: 20px 0 0 0;
+	background: #e5da91;
+	overflow: hidden;
+	}
+#users .display .activation .action > span{
+	float: right;
+	margin-top: 3px;
+	}
+    
+/* =right
+----------------------------------------------- */
+#users > .right .filter {
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    padding: 3px;
+    }
+#users > .right .filter select {
+    width: 234px;
+    font: 11px Arial;
+    }
+#users > .right .userList {
+    clear: both;
+    height: 500px;
+    overflow: auto;
+    }
+#users > .right .userList li {
+    padding: 3px;
+    cursor: pointer;
+    border-right: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    }
+#users > .right .userList li:hover {
+    background: #e9e9e9;
+     border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    }
+#users > .right .userList li:active {
+    background: #f26600;
+    color: #fff;
+    border-right: 1px solid #f23300;
+    border-bottom: 1px solid #f23300;
+    }
+#users > .right .userList li.on {
+    background: #666;
+    color: #efefef;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    }
+

@@ -1,0 +1,91 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		new Contacts();
+	});
+</script>
+<div class="page" id="contacts">
+
+	<div class="left">
+		<a class="mini button" id="createNewContact">
+			<span><img src="/styles/img/ico/contact_add.png" />New contact</span>
+		</a>
+	</div>
+	
+	<div class="middle">
+		
+		<div class="display" id="contactDisplay"></div>
+		
+		<div class="contactbox" id="contactBox"><div class="wrap"><div class="wrap">
+				
+			<div class="edit">
+				<a class="close" id="closeContactBox"><span>Close</span></a>
+				<h3 id="formHeader"></h3>
+			</div>
+			
+			<div class="contactForm">
+				
+				<div class="row">
+					<div class="left">Contact name</div>
+					<div class="right"><input type="text" id="name" /></div>
+				</div>
+				<div class="row">
+					<div class="left">Phone</div>
+					<div class="right"><input type="text" id="phone" /></div>
+				</div>
+				<div class="row break">
+					<div class="left">Email</div>
+					<div class="right"><input type="text" id="email" /></div>
+				</div>
+				<div class="row break">
+					<div class="left">Category</div>
+					<div class="right">
+						<em id="typeSelect">
+							<select id="type"></select>
+							<a class="new-type" id="open-create-type">Create new category</a>
+						</em>
+						<em id="typeCreate" class="type-create">
+							<input type="text" id="new-type-label" />
+							<a class="cancel-type" id="close-create-type">Cancel</a>
+						</em>
+					</div>
+				</div>
+				<div class="row">
+					<div class="left">Street address</div>
+					<div class="right"><input type="text" id="street" /></div>
+				</div>
+				<div class="row">
+					<div class="left">City</div>
+					<div class="right"><input type="text" id="city" /></div>
+				</div>
+				<div class="row">
+					<div class="left">State</div>
+					<div class="right"><input type="text" id="state" class="mini" /></div>
+				</div>
+				<div class="row">
+					<div class="left">Zip</div>
+					<div class="right"><input type="text" class="small" id="zip" /></div>
+				</div>
+				<div class="row break">
+					<div class="left">Description</div>
+					<div class="right"><textarea id="description"></textarea></div>
+				</div>
+				<div class="row">
+					<a class="button primary" id="saveContactButton"><span>Save contact</span></a>
+					<a class="button close" id="cancelContactBox"><span>Cancel</span></a>
+				</div>
+			</div>
+			
+		</div></div></div>
+		
+		
+		
+	</div>
+	
+	<div class="right" id="typeList">
+		<ul id="typeWrap">
+		</ul>
+	</div>
+	
+</div>
+<%inherit file="/base.html"/>

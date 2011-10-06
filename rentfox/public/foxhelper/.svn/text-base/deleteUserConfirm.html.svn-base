@@ -1,0 +1,12 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+
+	<p>Are you sure you want to delete this user?</p>
+
+	<div class="action">
+		<a class="primary button" id="deleteUserButton"><span>Yes, delete user</span></a>
+		<a class="button foxClose" id="deleteUserCancel"><span>Cancel</span></a>
+	</div>
+
+</div>

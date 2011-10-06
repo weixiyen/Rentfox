@@ -1,0 +1,146 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		help = new Help();
+	});
+</script>
+<div class="page" id="help">
+	<div class="left"><div class="wrap">
+		
+		<h1>FAQs</h1>
+		
+		<ul class="questions">
+			<li><a href="#faq-0">How do I get the most out of Rentfox?</a></li>
+			<li><a href="#faq-1">How can I add leases?</a></li>
+			<li><a href="#faq-2">How can I add tenants?</a></li>
+			<li><a href="#faq-3">Where can I find my tenants?</a></li>
+			<li><a href="#faq-4">How do I collect Rent online?</a></li>
+			<li><a href="#faq-5">How do I advertise my vacancies?</a></li>
+		</ul>
+		
+		<ul class="answers">
+			<li id="faq-0">
+				<h5>How do I make the most out of Rentfox?</h5>
+				<p>
+					Rentfox is currently in Beta.  We have finished
+					creating the absolute foundation of our rental management software 
+					and we are rapidly adding new features every week to make
+					Rentfox more valuable to your business.
+				</p>
+				<p>
+					To use Rentfox effectively, you should enter as much data
+					in Rentfox as you can, as this data will be useful
+					in upcoming features.
+				</p>
+				<p>
+					For example, adding photos to your units
+					may not seem important now, but once we release the listing 
+					manager this October, your personal web site 
+					containing all your active listings will be ready to go immediately
+					with no extra work on your part.
+				</p>
+				<p>
+					Here are some things you should do to make the most of Rentfox:
+					<ol>
+						<li>Create all your rental properties.</li>
+						<li>Add all units to each property.</li>
+						<li>Create leases for each active unit.</li>
+						<li>Add tenants to leases</li>
+						<li>Upload photos & floorplans.</li>
+						<li>Record all rental related expenses in Rentfox.</li>
+					</ol>
+				</p>
+			</li>
+			<li id="faq-1">
+				<h5>How can I add leases?</h5>
+				<p>
+					If you have added units numbers to your property, you can create leases.
+					You should create leases because it automates the rent collection process
+					so that you can collect rent by clicking one button. With leases, you will also be able
+					see upcoming vacancies, auto-remind remind tenants to pay via SMS, track
+					occupancy rates, auto-calculate late fee charges, and much more!
+				</p>
+				<p>Here's one way to add a lease:</p>
+					<ol>
+						<li>Select your property from the properties menu.</li>
+						<li>Select a unit from the right hand column.</li>
+						<li>From the unit page, click on the giant "leases" tab on the left.</li>
+						<li>Hover over the mini cog icon on the top right corner.</li>
+						<li>Select "Create Lease" from the menu.</li>
+					</ol>
+				</p>
+			</li>
+			<li id="faq-2">
+				<h5>How can I add tenants?</h5>
+				<p>
+					Tenants can only be added to leases.  
+					Here's one way to add a tenant:
+					<ol>
+						<li>Select your property from the properties menu.</li>
+						<li>Select a unit from the right hand column.</li>
+						<li>From the unit page, click on the giant "leases" tab on the left.</li>
+						<li>Select the lease you want from the giant "leases" tab.</li>
+						<li>Click on the "add tenant" link at the bottom of the lease.</li>
+					</ol>
+				</p>
+			</li>
+			<li id="faq-3">
+				<h5>Where can I find my tenants?</h5>
+				<p>
+					Currently Rentfox does not support listing of tenants in table format.
+					However, you will be able to search for tenants using the 
+					search box on the upper left.  Tenants can also be found on current
+					or past leases on unit pages.  Unit pages can be found by clicking
+					on a property, then clicking on the unit number on the right.
+				</p>
+			</li>
+			<li id="faq-4">
+				<h5>How do I collect Rent online?</h5>
+				<p>
+					Rentfox developers are currently working on a Resident Portal
+					that will allow landlords to collect rent online from tenants automatically.
+					Transaction fees will be kept as low as possible.
+				</p>
+				<p>
+					This feature will be released in December of 2010.
+				</p>
+			</li>
+			<li id="faq-5">
+				<h5>How do I advertise my vacancies?</h5>
+				<p>
+					Rentfox developers are currently working on a Listing Management
+					system.  Features include a killer listings website, Craigslist posting,
+					automatic online listing posting, prospective tenant scheduling,
+					online rental applications &amp; rental application processing.
+				</p>
+				<p>
+					This feature will be released in October of 2010.
+				</p>
+			</li>
+			
+			
+		</ul>
+		
+	</div></div>
+	<div class="right">
+		<div class="sect">
+			<h3>Contact Support</h3>
+			<p>
+				<a href="mailto:support@rentfox.net">support@rentfox.net</a>
+			</p>
+		</div>
+		<div class="sect last">
+			<h3>Support Details</h3>
+			<p>
+				Support Priority: VIP<br />
+				Response Time: Between 30min - 2hours.
+			</p>
+			<p>
+				We monitor emails actively during the day but foxes also need sleep.  
+				You'll hear back from us within 24 hours.
+			</p>
+		</div>
+	</div>
+</div>
+
+<%inherit file="/base.html"/>

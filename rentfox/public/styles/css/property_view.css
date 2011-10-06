@@ -1,0 +1,96 @@
+/* =layout
+----------------------------------------------- */
+#propertyView {
+	overflow: auto;
+	}
+	
+#propertyView .content {
+	width: 860px;
+	float: left;
+	margin-top: 20px;
+	}
+
+#propertyView .unitnav {
+	float: left;
+	margin-top: 20px;
+	}
+
+/* =unit scroller styling
+----------------------------------------------- */
+#propertyView .unitScroller .scrollFrame li.noFloorPlan {
+	padding-left: 30px;
+	color: #999;
+	background: url('../img/ico/accept_gray.png') no-repeat 4px center;
+	}
+#propertyView .unitScroller .scrollFrame li {
+	padding-left: 30px;
+	background: url('../img/ico/unit.png') no-repeat 4px center;
+	}
+#propertyView .unitScroller .scrollFrame li.on {
+	padding-left: 30px;
+	background: #333 url('../img/ico/unit.png') no-repeat 4px center;
+	}
+#propertyView .unitScroller .scrollFrame li:hover {
+	background-color: #ddd;
+	}
+#propertyView .unitScroller .scrollFrame li.on:hover {
+	background-color: #333;
+	}
+/* =header
+----------------------------------------------- */
+#propertyView .header { 
+	overflow: auto;
+	padding-bottom: 30px;
+	}
+#propertyView .header .miniProp {
+	overflow: auto;
+	}
+#propertyView .header .miniProp .pic {
+	float: left;
+	}
+#propertyView .header .miniProp .info {
+	float: left;
+	margin-left: 10px;
+	width: 200px;
+	}
+#propertyView .header .miniProp h3 {
+	font-size: 18px;
+	padding-bottom: 3px;
+	font-weight: normal;
+	}
+#propertyView .header .miniProp p {
+	line-height: 1.4em;
+	font-size: 11px;
+	}
+#propertyView .header .miniProp a.mini.button {
+	margin: 10px 0 0 0;
+	}
+	
+/* =pulse
+----------------------------------------------- */
+#propertyView .pulse {
+	float: left;
+	border-left: 1px solid #ccc;
+	width: 400px;
+	min-height: 460px;
+	padding-left: 15px;
+	}
+
+/* =stats
+----------------------------------------------- */
+#propertyView .info {
+	float: left;
+	width: 430px;
+	}
+#propertyView .progressbox {
+	margin: 0 30px 20px 0;
+	}
+#propertyView .chart {
+	margin: 0 30px 20px 0;
+	background: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	height: 250px;
+	}

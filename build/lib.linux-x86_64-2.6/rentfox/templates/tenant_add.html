@@ -1,0 +1,47 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		tenant = new TenantAdd({leaseId:'${c.leaseId}'});
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="tenantAdd">
+	
+	<div class="header">Add a new tenant to <strong>${c.unit}</strong></div>
+	
+	<div class="createForm" id="createForm">
+		<label for="fname">First Name<input type="text" id="fname" /></label>
+		<label for="lname">Last Name<input type="text" id="lname" /></label>
+		<label for="email">Email<input type="text" id="email" /></label>
+		<label for="phone">Phone<input type="text" id="phone" /></label>
+		<div class="tooltip">
+			<div class="arrow"></div>
+			<h5>SMS Alerts</h5>
+			<p>
+				Rentfox will automatically send SMS rent
+				reminders 3 days before rent 
+				is due to this phone number.
+			</p>
+		</div>
+		<a class="primary button" id="continueCreateTenant"><span>Continue</span></a>
+		<a class="button" href="/unit/view/${c.unitId}"><span>Cancel</span></a>
+	</div>
+	
+	<div class="tenantMatches" id="tenantMatches">
+		<div class="prompt">
+			<h1>Wait!</h1>
+			<p>Could this person already exist in the database?</p>
+		
+			<div class="submit">
+				<a class="primary button" id="noMatchButton"><span>No, lets continue...</span></a>
+			</div>
+		</div>
+		
+		<div class="tenants" id="tenantMatchList"></div>
+		
+	</div>
+	
+</div>
+
+<%inherit file="/base.html"/>

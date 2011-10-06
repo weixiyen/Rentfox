@@ -1,0 +1,173 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page;
+		user = new Users({propertyId:'${c.curPropId}'});
+	});
+</script>
+<div class="page" id="users">
+	
+	<div class="left"><a class="mini button" id="createNewUser"><span><img src="/styles/img/ico/user_add.png" />Create new user</span></a></div>
+	
+	<div class="middle">
+		<div class="userbox" id="createBox"><div class="wrap"><div class="wrap">
+			
+			<div class="create">
+				<a class="close" id="closeCreateBox"><span>Close</span></a>
+				<h3>Create new property manager</h3>
+			</div>
+			
+			<div class="userForm">
+				<div class="row">
+					<div class="left">First Name</div>
+					<div class="right"><input type="text" class="date" id="create-fname" /></div>
+				</div>
+				<div class="row">
+					<div class="left">Last Name</div>
+					<div class="right"><input type="text" class="date" id="create-lname" /></div>
+				</div>
+				<div class="row">
+					<div class="left">Phone</div>
+					<div class="right"><input type="text" class="date" id="create-phone" /></div>
+				</div>
+				<div class="row break">
+					<div class="left">Email</div>
+					<div class="right"><input type="text" class="date" id="create-email" /></div>
+				</div>
+				<div class="row break" id="createUserRoleSection">
+					<div class="left">Role</div>
+					<div class="right">
+						<input type="checkbox" id="create-admin" />
+						<label for="create-admin">Administrator</label>
+						<div class="indented">
+							Administrators can view ALL properties and modify users.
+							Non-administrators (managers) only have access to properties 
+							that you specify.
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<a class="button primary" id="createUserButton"><span>Create this user</span></a>
+					<a class="button cancel" id="cancelCreateBox"><span>Cancel</span></a>
+				</div>
+			</div>
+			
+		</div></div></div>
+
+		<div class="userbox" id="displayBox"><div class="wrap"><div class="wrap">
+			
+			<div class="display">
+				
+				<a class="close" id="closeDisplayBox"><span>Close</span></a>
+				<div class="useredit" id="userMoremenu">
+					<div class="moremenu"><div class="wrap">
+						<label></label>
+						<div class="options">
+							<ul>
+								<li id="editBasicInfo">Edit basic info</li>
+								<li id="addProperties">Add properties</li>
+								<li id="removeProperties">Remove properties</li>
+								<li id="deleteUser">Delete user</li>
+							</ul>
+						</div>
+					</div></div>
+				</div>
+
+				<div class="profile">
+					<div class="thumb white user"><span class="frame"><img src="" /></span></div>
+					<dl>
+						<dt class="display-name"></dt>
+						<dd class="display-email"></dd>
+						<dd class="display-phone"></dd>
+					</dl>
+				</div>
+				
+				<div class="activation" id="activation">
+					<span class="important"><span class="display-fname"></span> has not signed up yet...</span>
+					<p>We have sent an activation email to <span class="display-fname"></span>
+					 at <span class="display-email"></span>.</p>
+					<p>If <span class="display-fname"></span> has not received an email from us, please provide him / her
+					the following link:</p>
+					<input class="link" id="activation-link" type="text" />
+					<div class="action">
+						<span id="activation-last-sent"></span>
+						<a class="mini button" id="resendActivationEmail"><span><img src="/styles/img/ico/mail.png" />Re-send activation link</span></a>
+					</div>
+				</div>
+				
+				<div class="info">
+					<div class="label">Stats</div>
+					<div class="content">
+						User was created on <span id="stats-user-created"></span>.<br />
+						Granted access to Rentfox for <span id="stats-user-total-properties"></span>.
+					</div>
+					
+				</div>
+				
+				
+				
+				<div class="info">
+					<div class="label">
+						Properties
+					</div>
+					<div class="content" id="userPropertyList"></div>
+				</div>
+				
+				
+			</div>
+		</div></div></div>
+		
+		<div class="userbox" id="editBox"><div class="wrap"><div class="wrap">
+				
+			<div class="edit"><h3 id="editorName"></h3></div>
+			
+			<div class="userForm">
+				
+				<div class="row">
+					<div class="left">First Name</div>
+					<div class="right"><input type="text" class="date" id="update-fname" /></div>
+				</div>
+				<div class="row">
+					<div class="left">Last Name</div>
+					<div class="right"><input type="text" class="date" id="update-lname" /></div>
+				</div>
+				<div class="row">
+					<div class="left">Phone</div>
+					<div class="right"><input type="text" class="date" id="update-phone" /></div>
+				</div>
+				<div class="row break">
+					<div class="left">Email</div>
+					<div class="right"><input type="text" class="date" id="update-email" /></div>
+				</div>
+				<div class="row break" id="updateUserRoleSection">
+					<div class="left">Role</div>
+					<div class="right">
+						<input type="checkbox" id="update-admin" />
+						<label for="update-admin">Administrator</label>
+						<div class="indented">Administrators can view all properties and modify users.</div>
+					</div>
+				</div>
+				<div class="row">
+					<a class="button primary" id="saveUserButton"><span>Save user</span></a>
+					<a class="button cancel" id="cancelEditBox"><span>Cancel</span></a>
+				</div>
+			</div>
+			
+		</div></div></div>
+		
+		
+		
+	</div>
+	
+	<div class="right">
+		<div class="filter">
+			<select id="propertyList"></select>
+		</div>
+		<div class="userList" id="userList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+<%inherit file="/base.html"/>

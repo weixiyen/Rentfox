@@ -1,0 +1,39 @@
+<%inherit file="/base.html"/>
+<script type="text/javascript">
+	$(document).ready(function(){
+		page = new Page();
+		var search = new Search('${c.q}');
+	});
+</script>
+
+<!-- Page -->
+<div class="page" id="search">
+	<div class="results">
+		<div class="display" id="search-results"></div>
+	</div>
+	<div class="filters">
+	
+		<div class="unitTable section">
+			<div class="pagination left" id="pagination">
+				<a class="first control disabled"></a>
+				<a class="prev control disabled"></a>
+				<a class="pages" id="pagination-info"></a>
+				<a class="next control disabled"></a>
+				<a class="last control disabled"></a>
+			</div>
+		</div>
+		
+		<div class="section">
+			<input id="search-box" type="text" class="searchbox" value="${c.q}" />
+		</div>
+		
+		<div class="last section">
+			<a class="filter on" id="filter-all">All Property Information</a>
+			<a class="filter" id="filter-property">Properties</a>
+			<a class="filter" id="filter-unit">Units</a>
+			<a class="filter" id="filter-tenant">Tenants</a>
+			<a class="filter" id="filter-contact">Contacts</a>
+		</div>
+	</div>
+</div>
+

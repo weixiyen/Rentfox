@@ -1,0 +1,199 @@
+/* =layout
+----------------------------------------------- */
+#contacts {
+    overflow: auto;
+    }
+#contacts > div {
+    margin: 10px 0 0 0;    
+    }
+#contacts > .left {
+    float: left;
+    width: 140px;
+    }
+#contacts > .middle {
+    float: left;
+    width: 560px;
+    overflow: hidden;
+    }
+#contacts > .right {
+    margin-left: 700px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 240px;
+    position: fixed;
+    }
+   
+/* =left display
+----------------------------------------------- */
+#contacts > .left .button {
+    margin-left: 10px;
+    position: fixed;
+    overflow: auto;
+    }
+
+/* =right display
+----------------------------------------------- */
+#contacts > .right > ul > li {
+    padding: 5px 5px 5px 10px;
+    cursor: pointer;
+    }
+#contacts > .right > ul > li:hover {
+	background: #ddd;
+	}
+#contacts > .right > ul > li.on {
+	background: #666;
+	color: #fff;
+	}
+#contacts > .right > ul > li.on:hover {
+	background: #666;
+	}
+#contacts > .right > ul > li .opts {
+	float: right;
+	}
+
+	
+/* =contacts item
+----------------------------------------------- */
+#contacts > .middle .item {
+	float: left;
+	overflow: hidden;
+	padding: 10px;
+	width: 200px;
+	margin: 0 10px 10px 0;
+	line-height: 1.7em;
+	border-right: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+	}
+#contacts > .middle .item .contactDesc {
+	height:12px;
+}
+#contacts > .middle .item:hover {
+	background: #ddd;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	}
+#contacts > .middle .item > img {
+	float: right;
+	display: none;
+	cursor: pointer;
+	margin-left: 3px;
+	}
+#contacts > .middle .item:hover > img {
+	display: block;
+	}
+#contacts > .middle .item strong {
+	font-weight: bold;
+	display: block;
+	padding: 0 0 5px 0;
+	}
+	
+/* =contacts box
+----------------------------------------------- */
+#contacts > .middle .contactbox {
+    padding: 0 0 4px 0;
+    background: no-repeat url("../img/unit_display_bottom.png") center bottom;
+    }
+#contacts > .middle .contactbox > .wrap {
+    padding: 4px 0 0 0;
+    background: no-repeat url("../img/unit_display_top.png");
+    }
+#contacts > .middle .contactbox > .wrap > .wrap {
+    background: #fff;
+    width: 478px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    }
+#contacts > .middle .contactbox > .wrap > .wrap > div {
+    padding: 20px;
+    }
+#contacts > .middle .contactbox > .wrap > .wrap > div > a.close {
+    display: block;
+    float: right;
+    height: 16px;
+    width: 16px;
+    background: no-repeat url("../img/ico/x.png");
+    cursor: pointer;
+    }
+#contacts > .middle .contactbox > .wrap > .wrap > div > a.close > span {
+    display: none;
+    }
+#contacts > .middle > .contactbox {
+    float: left;
+    display: none;
+    }
+    
+/* edit box */
+#contacts .contactbox h3 {
+    font: bold 14px Verdana;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ccc;
+    }
+#contacts .contactForm {
+    overflow: hidden;    
+    }
+#contacts .contactForm .row {
+    overflow: auto;
+    font-size: 12px;
+    margin-bottom: 15px;    
+    }
+#contacts .contactForm .left {
+    float: left;
+    width: 30%;
+    font-weight: bold;
+    }
+#contacts .contactForm .right {
+    float: left;
+    width: 70%;
+    overflow: hidden;
+    }
+#contacts .contactForm .right span {
+    font-size: 10px;
+    color: #666;
+    margin: 0 10px 0 10px;
+    }
+#contacts .contactForm .right div {
+    font-size: 10px;
+    color: #666;
+    margin: 5px 0 0 0;
+    }
+#contacts .contactForm .right .indented {
+    margin-left: 25px;
+    }
+#contacts .contactForm .row.break {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    }
+#contacts .contactForm .row .button.cancel {
+    float: right;
+    }
+#contacts .contactForm .right textarea {
+    width: 300px;
+    height: 50px;
+    }
+#contacts .contactForm .right input.small {
+    width: 75px;
+    }
+#contacts .contactForm .right input.mini {
+    width: 30px;
+    }
+#contacts .contactForm .type-create {
+	display: none;
+	}
+#contacts .contactForm .right a.new-type {
+    color: blue;
+    display: block;
+    margin: 10px 0 0 0;
+    text-decoration: underline;
+    cursor: pointer;
+    }
+#contacts .contactForm .right a.cancel-type {
+    color: red;
+    display: block;
+    margin: 10px 0 0 0;
+    text-decoration: underline;
+    cursor: pointer;
+    }
+#contacts .contactForm .close {
+	float: right;
+	}

@@ -1,0 +1,16 @@
+<div class="wrap">
+
+	<div class="foxClose"><span>Close</span></div>
+        
+        <p>
+        	<label>Enter Your Password</label>
+            <input type="password" id="password" />
+        </p>
+        
+
+	<div class="action">
+		<a class="primary button" id="deleteCompanyButton"><span>Delete company account</span></a>
+		<a class="button foxClose"><span>Cancel</span></a>
+	</div>
+
+</div>

@@ -1,10 +1,11 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1281767149.598392
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/company_manage.html'
+_magic_number = 6
+_modified_time = 1318760196.491192
+_template_filename='/root/rentfox/rentfox/templates/company_manage.html'
 _template_uri='/company_manage.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'
@@ -22,7 +23,7 @@ def _mako_generate_namespaces(context):
     pass
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
-    return runtime._inherit_from(context, '/base.html', _template_uri)
+    return runtime._inherit_from(context, u'/base.html', _template_uri)
 def render_body(context,**pageargs):
     context.caller_stack._push_frame()
     try:
@@ -36,6 +37,7 @@ def render_body(context,**pageargs):
         if c.is_superuser:
             # SOURCE LINE 5
             __M_writer(u'\t\tcompany = new CompanyManage\n')
+            pass
         # SOURCE LINE 7
         __M_writer(u'\t});\n</script>\n<div class="page" id="companyManage">\n\t<div class="left"><div class="wrap">\n\t\t<div class="row">\n\t\t\t<label>Company</label>\n\t\t\t<div class="item"><span id="editName">')
         # SOURCE LINE 13
@@ -60,6 +62,7 @@ def render_body(context,**pageargs):
         if c.is_superuser:
             # SOURCE LINE 36
             __M_writer(u'\t\t<div class="row">\n\t\t\t<label>&nbsp;</label>\n\t\t\t<div class="item"><a id="switchSuperuser" class="link">Give Account Owner to someone else</a></div>\n\t\t</div>\n\t\t<div class="row last">\n\t\t\t<label>Delete</label>\n\t\t\t<div class="item"><a id="deleteAccount" class="deleteAccount">Delete Company</a></div>\n\t\t</div>\n')
+            pass
         # SOURCE LINE 45
         __M_writer(u'\t\t\n\t</div></div>\n\t<div class="right">\n\t\t<div class="sect">\n\t\t\t<h3 id="company-name">')
         # SOURCE LINE 49
@@ -96,12 +99,14 @@ def render_body(context,**pageargs):
                 __M_writer(u'\t\t\t\t\t\t')
                 __M_writer(escape(property['name']))
                 __M_writer(u'<br />\n')
+                pass
             # SOURCE LINE 65
             __M_writer(u'\t\t\t\t</p>\n')
             # SOURCE LINE 66
         else:
             # SOURCE LINE 67
             __M_writer(u'\t\t\t\t<p>Portfolio contains no properties yet.</p>\n')
+            pass
         # SOURCE LINE 69
         __M_writer(u'\t\t\t\n\t\t</div>\n\t</div>\n</div>\n')
         return ''

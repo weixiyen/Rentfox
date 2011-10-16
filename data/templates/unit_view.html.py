@@ -1,10 +1,11 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1281763326.7169881
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/unit_view.html'
+_magic_number = 6
+_modified_time = 1318784554.777828
+_template_filename='/root/rentfox/rentfox/templates/unit_view.html'
 _template_uri='/unit_view.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'
@@ -22,7 +23,7 @@ def _mako_generate_namespaces(context):
     pass
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
-    return runtime._inherit_from(context, '/base.html', _template_uri)
+    return runtime._inherit_from(context, u'/base.html', _template_uri)
 def render_body(context,**pageargs):
     context.caller_stack._push_frame()
     try:
@@ -55,6 +56,7 @@ def render_body(context,**pageargs):
             __M_writer(u'</a> #')
             __M_writer(escape(c.unit.label))
             __M_writer(u'\n')
+            pass
         # SOURCE LINE 22
         __M_writer(u'\t\t\t\t\t</h3>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t')
         # SOURCE LINE 24
@@ -78,6 +80,7 @@ def render_body(context,**pageargs):
             __M_writer(u'\t\t\t\t\t\t<div class="floorplan"><span><img src="')
             __M_writer(escape(c.floorplan.photo))
             __M_writer(u'" height="70" id="floorplan-img" /></span></div>\n')
+            pass
         # SOURCE LINE 115
         __M_writer(u'\t\t\t\t\t\t<div class="info">\n\t\t\t\t\t\t\t<h3>')
         # SOURCE LINE 116
@@ -100,6 +103,7 @@ def render_body(context,**pageargs):
         if c.property.type == 'multi':
             # SOURCE LINE 395
             __M_writer(u'\t<div class="unitnav">\n\t\t<!-- unit scroller (re-usable) -->\n\t\t<div class="unitScroller" id="unitScroller">\n\t\t\t<div class="label">Unit #</div>\n\t\t\t<div class="manualInput">\n\t\t\t\t<input type="text" alt="filter" />\n\t\t\t</div>\n\t\t\t<div class="scrollFrame" id="scrollFrame"><ul></ul></div>\n\t\t\t<div class="controls">\n\t\t\t\t<div class="slider"></div>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- end unit scroller -->\n\t</div>\n')
+            pass
         # SOURCE LINE 410
         __M_writer(u'</div>\n\n<div id="previewModal">\n\t<div class="close">Close Window</div>\n\t<img />\n</div>\n\n')
         return ''

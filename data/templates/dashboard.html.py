@@ -1,10 +1,11 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1281763317.6005521
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/dashboard.html'
+_magic_number = 6
+_modified_time = 1318759681.132702
+_template_filename='/root/rentfox/rentfox/templates/dashboard.html'
 _template_uri='/dashboard.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'
@@ -22,7 +23,7 @@ def _mako_generate_namespaces(context):
     pass
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
-    return runtime._inherit_from(context, '/base.html', _template_uri)
+    return runtime._inherit_from(context, u'/base.html', _template_uri)
 def render_body(context,**pageargs):
     context.caller_stack._push_frame()
     try:
@@ -57,6 +58,7 @@ def render_body(context,**pageargs):
                 # SOURCE LINE 47
                 __M_writer(escape(property['percentOccupied']))
                 __M_writer(u'</span></dd>\n\t\t\t\t</dl>\n\t\t\t</a>\n')
+                pass
             # SOURCE LINE 51
             __M_writer(u'\t\n')
             # SOURCE LINE 52
@@ -73,12 +75,14 @@ def render_body(context,**pageargs):
                 __M_writer(u'">')
                 __M_writer(escape(property['name']))
                 __M_writer(u'</a>\n')
+                pass
             # SOURCE LINE 57
             __M_writer(u'\t\t\n')
             # SOURCE LINE 58
         else:
             # SOURCE LINE 59
             __M_writer(u'\t\t<div class="tooltip">\n\t\t\t<div class="arrow"></div>\n\t\t\t<h1>Start Here</h1>\n\t\t\t<p>You\'ll need to create a property first, then some units, floorplans, and leases.</p>\n\t\t</div>\n')
+            pass
         # SOURCE LINE 65
         __M_writer(u'\n\t</div>\n\n\t\n\t<div class="search" id="searchpanel">\n\t\t<div class="logo"></div>\n\n\t\t<div class="stats">\n\t\t\t\n\t\t\t<div class="progressbox" id="rent-progress">\n\t\t\t\t<h3>')
         # SOURCE LINE 75

@@ -16,6 +16,21 @@ import re
 import json
 import string
 
+c.menuDashboard = 'off'
+c.menuCompany = 'off'
+c.menuAccount = 'off'
+c.menuUsers = 'off'
+c.menuHelp = 'off'
+c.menuRecord = 'off'
+c.menuProperty = 'off'
+c.menuUnits = 'off'
+c.menuReports = 'off'
+c.menuContacts = 'off'
+c.submenuStaff = 'off'
+c.submenuProperty = 'off'
+c.curPropName = ''
+c.curPropId = False
+
 log = logging.getLogger(__name__)
 
 class UnitController(BaseController):

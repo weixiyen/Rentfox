@@ -17,6 +17,21 @@ from datetime import date
 
 log = logging.getLogger(__name__)
 
+c.menuDashboard = 'off'
+c.menuCompany = 'off'
+c.menuAccount = 'off'
+c.menuUsers = 'off'
+c.menuHelp = 'off'
+c.menuRecord = 'off'
+c.menuProperty = 'off'
+c.menuUnits = 'off'
+c.menuReports = 'off'
+c.menuContacts = 'off'
+c.submenuStaff = 'off'
+c.submenuProperty = 'off'
+c.curPropName = ''
+c.curPropId = False
+
 class DashboardController(BaseController):
     @h.authorize(h.is_manager)
     @h.authenticate
@@ -60,8 +75,19 @@ class DashboardController(BaseController):
         c.currentMonth = datetime.date.today().strftime('%B')
         
         c.menuDashboard = 'on'
-                
-        return render('/dashboard.html')
+        c.menuCompany = 'off'      
+        c.menuAccount = 'off'
+	c.menuUsers = 'off'
+	c.menuHelp = 'off'
+	
+	c.menuSubmenu = False	
+	c.menuRecord = 'off'
+	c.menuProperty = 'off'
+	c.menuUnits = 'off'
+	c.menuReports = 'off'
+	c.menuContacts = 'off'
+
+	return render('/dashboard.html')
 
     def secure(self):
         return 'Secure page, admin only'

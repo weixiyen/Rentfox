@@ -7,7 +7,7 @@ available to Controllers. This module is available to templates as 'h'.
 #from webhelpers.html.tags import checkbox, password
 from routes import url_for
 from pylons import request, tmpl_context as c
-from pylons.controllers.util import redirect_to
+from pylons.controllers.util import redirect as redirect_to
 from decorator import decorator
 from authkit.authorize.pylons_adaptors import authorize
 from authkit.permissions import ValidAuthKitUser, HasAuthKitGroup, And

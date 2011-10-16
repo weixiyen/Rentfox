@@ -93,6 +93,7 @@ rentfox/lib/storage.pyc
 rentfox/lib/types_uuid.py
 rentfox/lib/types_uuid.pyc
 rentfox/lib/usps.py
+rentfox/lib/usps.pyc
 rentfox/lib/valid.py
 rentfox/lib/valid.pyc
 rentfox/model/__init__.py
@@ -193,6 +194,8 @@ rentfox/public/js/property_setup.js
 rentfox/public/js/property_units.js
 rentfox/public/js/property_view.js
 rentfox/public/js/pulse.js
+rentfox/public/js/rentfox.js
+rentfox/public/js/rentfox.min.js
 rentfox/public/js/reports_transactions.js
 rentfox/public/js/search.js
 rentfox/public/js/searchsuggest.js
@@ -221,6 +224,7 @@ rentfox/public/styles/css/property_record.css
 rentfox/public/styles/css/property_setup.css
 rentfox/public/styles/css/property_units.css
 rentfox/public/styles/css/property_view.css
+rentfox/public/styles/css/rentfox.css
 rentfox/public/styles/css/reports_transactions.css
 rentfox/public/styles/css/search.css
 rentfox/public/styles/css/searchsuggest.css
@@ -438,6 +442,7 @@ rentfox/templates/unit_view.html
 rentfox/templates/users.html
 rentfox/templates/foxhelper/ajaxerror.html
 rentfox/templates/foxhelper/confirm.html
+rentfox/templates/foxhelper/default.html
 rentfox/templates/foxhelper/deleteCompany.html
 rentfox/templates/foxhelper/deleteUser.html
 rentfox/templates/foxhelper/endLease.html

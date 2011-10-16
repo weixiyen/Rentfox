@@ -1,10 +1,11 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1283018627.3734021
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/signin.html'
+_magic_number = 6
+_modified_time = 1318761770.33637
+_template_filename='/root/rentfox/rentfox/templates/signin.html'
 _template_uri='/signin.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'
@@ -21,7 +22,7 @@ def render_body(context,**pageargs):
         # SOURCE LINE 1
         __M_writer(u'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml">\n<head>\n\t<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n\t<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->\n    <title>Rentfox | Sign in</title>\n\t')
         # SOURCE LINE 7
-        runtime._include_file(context, 'externalfiles.html', _template_uri)
+        runtime._include_file(context, u'externalfiles.html', _template_uri)
         __M_writer(u'\n</head>\n<body id="signinpage">\n    <div id="eventStatus">loading...</div>\t\n    <div id="foxhelper">\n            <img src="/styles/img/foxhelper_shadow.png" class="thefox" />\n            <div class="foxpanel"><div class="panelwrap">\n                    <div class="display">\n                        <div class="wrap">\n                            \n                            <div class="default view on">\n')
         # SOURCE LINE 18
         if c.error:
@@ -29,6 +30,7 @@ def render_body(context,**pageargs):
             __M_writer(u'                                <div class="error on">')
             __M_writer(escape(c.error))
             __M_writer(u'</div>\n')
+            pass
         # SOURCE LINE 21
         __M_writer(u'                                <form method="post" action="')
         __M_writer(escape(c.path))

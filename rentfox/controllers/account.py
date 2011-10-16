@@ -14,6 +14,21 @@ import rentfox.lib.helpers as h
 from recaptcha.client import captcha
 from rentfox.lib import email as mailman
 
+c.menuDashboard = 'off'
+c.menuCompany = 'off'
+c.menuAccount = 'off'
+c.menuUsers = 'off'
+c.menuHelp = 'off'
+c.menuRecord = 'off'
+c.menuProperty = 'off'
+c.menuUnits = 'off'
+c.menuReports = 'off'
+c.menuContacts = 'off'
+c.submenuStaff = 'off'
+c.submenuProperty = 'off'
+c.curPropName = ''
+c.curPropId = False
+
 log = logging.getLogger(__name__)
 
 users = request.environ['authkit.users']

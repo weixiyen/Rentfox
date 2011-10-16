@@ -1,10 +1,11 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1281606820.4093039
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/foxhelper/ajaxerror.html'
+_magic_number = 6
+_modified_time = 1318785051.797194
+_template_filename='/root/rentfox/rentfox/templates/foxhelper/ajaxerror.html'
 _template_uri='/foxhelper/ajaxerror.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'

@@ -1,10 +1,11 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1281767584.1808951
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/foxhelper/index.html'
+_magic_number = 6
+_modified_time = 1318760192.324655
+_template_filename='/root/rentfox/rentfox/templates/foxhelper/index.html'
 _template_uri='/foxhelper/index.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'
@@ -35,6 +36,7 @@ def render_body(context,**pageargs):
             __M_writer(u'"><span>')
             __M_writer(escape(c.alert['button']))
             __M_writer(u'</span></a>\n\t\t<a class="button foxClose"><span>Cancel</span></a>\n\t</div>\n')
+            pass
         # SOURCE LINE 13
         __M_writer(u'\n</div>')
         return ''

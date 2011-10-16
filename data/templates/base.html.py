@@ -1,11 +1,12 @@
+# -*- encoding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
-_magic_number = 5
-_modified_time = 1281763317.614516
-_template_filename='/var/apps/rentfox_dev/rentfox/templates/base.html'
-_template_uri='/base.html'
+_magic_number = 6
+_modified_time = 1318759681.231777
+_template_filename=u'/root/rentfox/rentfox/templates/base.html'
+_template_uri=u'/base.html'
 _template_cache=cache.Cache(__name__, _modified_time)
 _source_encoding='utf-8'
 from webhelpers.html import escape
@@ -28,7 +29,7 @@ def render_body(context,**pageargs):
         __M_writer(escape(request.environ.get('COMPANY_NAME')))
         __M_writer(u'</title>\n\t')
         # SOURCE LINE 7
-        runtime._include_file(context, 'externalfiles.html', _template_uri)
+        runtime._include_file(context, u'externalfiles.html', _template_uri)
         __M_writer(u'\n</head>\n<body>\n<div id="header">\n\t<form class="search" method="GET" action="/search">\n\t\t<div class="box"><input class="searchbox" type="text" name="q" alt="Search anything..." /></div>\n\t\t<div class="find"><button><span>Search</span></button></div>\n\t</form>\n\t<ul class="me">\n\t\t<li class="')
         # SOURCE LINE 16
         __M_writer(escape(c.menuDashboard))
@@ -67,6 +68,7 @@ def render_body(context,**pageargs):
             __M_writer(u'">')
             __M_writer(escape(c.curPropName))
             __M_writer(u'</a></li>\n\t\t</ul>\n\t</div>\n')
+            pass
         # SOURCE LINE 59
         __M_writer(u'\t\n\t<div class="main">\n\t\t<ul>\n\t\t\t<li class="record ')
         # SOURCE LINE 62
@@ -83,6 +85,7 @@ def render_body(context,**pageargs):
             __M_writer(u'">')
             __M_writer(escape(property['name']))
             __M_writer(u'</a></li>\n')
+            pass
         # SOURCE LINE 72
         __M_writer(u'\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="trunk"></div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class="units ')
         # SOURCE LINE 78
@@ -102,12 +105,14 @@ def render_body(context,**pageargs):
         else:
             # SOURCE LINE 87
             __M_writer(u'\t<div class="backdrop" id="menuBackdrop"></div>\n')
+            pass
         # SOURCE LINE 89
         __M_writer(u'\n</div>\n\n')
         # SOURCE LINE 92
         if c.foxAlert != False:
             # SOURCE LINE 93
             __M_writer(u'<script type="text/javascript">\n\t$(function(){\n\t\tpage.fox.showAlert();\n\t});\n</script>\n')
+            pass
         # SOURCE LINE 99
         __M_writer(u'\n<script type="text/javascript">\n\t\n\tvar _gaq = _gaq || [];\n\t_gaq.push([\'_setAccount\', \'UA-2806397-2\']);\n\t_gaq.push([\'_trackPageview\']);\n\n\t(function() {\n\t    var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;\n\t    ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';\n\t    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);\n\t})();\n\n</script>\n\n<script type="text/javascript">\n  var uservoiceOptions = {\n    key: \'rentfox\',\n    host: \'rentfox.uservoice.com\', \n    forum: \'24116\',\n    lang: \'en\',\n    showTab: false\n  };\n  function _loadUserVoice() {\n    var s = document.createElement(\'script\');\n    s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js";\n    document.getElementsByTagName(\'head\')[0].appendChild(s);\n  }\n  _loadSuper = window.onload;\n  window.onload = (typeof window.onload != \'function\') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };\n</script>\n\n</body>\n</html>')
         return ''
